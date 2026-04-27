@@ -65,6 +65,21 @@
   .hero-image { overflow:hidden; }
   .hero-image img { width:100%; height:100%; object-fit:cover; object-position:center top; }
 
+  /* AVAILABILITY BANNER */
+  .availability {
+    background: var(--dark);
+    color: white;
+    padding: 18px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    text-align: center;
+  }
+  .availability-icon { font-size: 1.3rem; }
+  .availability-text { font-size: 0.95rem; font-weight: 300; letter-spacing: 0.02em; }
+  .availability-text strong { font-weight: 600; color: var(--blue); }
+
   /* STRIP */
   .strip { background:var(--blue); padding:18px 80px; display:flex; align-items:center; gap:40px; overflow:hidden; }
   .strip-text { font-family:'Cormorant Garamond',serif; font-size:1.05rem; font-style:italic; white-space:nowrap; color:var(--dark); }
@@ -88,7 +103,7 @@
   .section-header { text-align:center; margin-bottom:64px; }
   .section-tag { display:inline-block; font-size:0.72rem; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:var(--blue-dark); margin-bottom:14px; }
   .section-header h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,3vw,3rem); font-weight:300; line-height:1.2; }
-  .services-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  .services-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; max-width:900px; margin:0 auto; }
   .service-card { background:var(--light); border-radius:8px; padding:40px 32px; position:relative; overflow:hidden; transition:transform 0.3s,box-shadow 0.3s; }
   .service-card:hover { transform:translateY(-4px); box-shadow:0 16px 40px rgba(0,0,0,0.08); }
   .service-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--blue); }
@@ -186,6 +201,12 @@
   </div>
 </section>
 
+<!-- AVAILABILITY BANNER -->
+<div class="availability">
+  <span class="availability-icon">🕔</span>
+  <span class="availability-text">Saadaval ka <strong>peale kella 17</strong> ja <strong>nädalavahetustel</strong> — kui sina vajad, olen olemas</span>
+</div>
+
 <!-- STRIP -->
 <div class="strip">
   <span class="strip-text">Sisuloome</span><span class="strip-dot"></span>
@@ -240,6 +261,11 @@
       <p>Pluginate uuendamine, lisamine, backup, tekstid, vahelehed jne. Töötan ka nädalavahetusel.</p>
     </div>
     <div class="service-card">
+      <div class="service-icon">📊</div>
+      <h3>Digijälgimine</h3>
+      <p>Meta Pixel ja Google Analytics lisamine kodulehele. Näed kohe kes sinu lehel käib, kust tulevad ja mida teevad. Sisaldab Business konto seadistamist ja esimest analüüsi.</p>
+    </div>
+    <div class="service-card">
       <div class="service-icon">🎙️</div>
       <h3>Webinarid &amp; turundus</h3>
       <p>Mina hoolitsen väljanägemise ja tehnilise poole eest — kõik ettevalmistused, kogu webinari aja assisteerimine ja järeltegevus.</p>
@@ -257,33 +283,40 @@
     <div class="price-card">
       <h3>Kodulehe sisu</h3>
       <div class="price-amount">50€ <span>/ päev</span></div>
-      <p>Sisu muutmine, vahelehed, blogi tekstid. Sisu kliendi poolt.</p>
+      <p>Tekstide muutmine ja lisamine, piltide vahetamine, vahelehtede uuendamine ja blogi postituste ülespanek. Töötan ka nädalavahetusel.</p>
+      <p class="price-note">⚠️ Sisu tuleb kliendilt valmis kujul.</p>
     </div>
     <div class="price-card">
       <h3>Webinari haldus</h3>
       <div class="price-amount">500€ <span>/ webinar</span></div>
-      <p>Kogu tehniline pool, uudiskirjad, automaatika ja assisteerimine.</p>
+      <p>Zoom seadistamine ja ühendamine FB grupiga, registreerimisleht, kuni 5 uudiskirja, ürituse loomine (FB, Fienta), ooteruumi imago ja haldamine, osalejatega suhtlemine ja tehniline abistamine, salvestuse jagamine.</p>
     </div>
     <div class="price-card">
       <h3>Kodulehe audit</h3>
       <div class="price-amount">220€</div>
-      <p>Põhjalik ülevaade sinu veebilehe seisukorrast ja parandusettepanekud.</p>
+      <p>Põhjalik kirjalik raport sinu veebilehe seisukorrast koos parandusettepanekutega. Sisaldab ettepanekute osalist elluviimist, olenevalt tegevustest.</p>
     </div>
     <div class="price-card">
       <h3>Nädalapõhine assisteerimine</h3>
       <div class="price-amount">200€ <span>/ nädal</span></div>
-      <p>Regulaarne tugi iganädalaselt.</p>
+      <p>8 tundi nädalas — kõik mida vaja. Email, kalender, sotsiaalmeedia, koduleht, ülesanded. Sina teed otsused, mina hoian asjad korras.</p>
     </div>
     <div class="price-card">
       <h3>Tunnipõhine teenus</h3>
       <div class="price-amount">50€ <span>/ tund</span></div>
-      <p>Kiire abi konkreetse ülesandega. Olen kiire!</p>
+      <p>Kiire abi konkreetse ülesandega. Minimaalselt 30 minutit. Olen kiire!</p>
     </div>
     <div class="price-card">
       <h3>Projektipõhine teenus</h3>
       <div class="price-amount">~150€</div>
-      <p>Tavaliselt saadakse 150 euroga hakkama.</p>
+      <p>Saadan sulle täpse hinnapakkumise enne töö algust. Tavaliselt saadakse 150 euroga hakkama.</p>
       <p class="price-note">Hind sõltub projekti mahust.</p>
+    </div>
+    <div class="price-card" style="border-top: 3px solid var(--blue-dark);">
+      <h3>Digijälgimine algusest lõpuni</h3>
+      <div class="price-amount">299€</div>
+      <p>Meta Business konto sisseseadmine, Meta Pixel ja Google Analytics 4 lisamine kodulehele, kontroll et kõik töötab ning esimene andmete analüüs 2 nädalat pärast lisamist.</p>
+      <p class="price-note">✅ Näed kohe kes sinu lehel käib ja kust tulevad.</p>
     </div>
   </div>
 </section>
