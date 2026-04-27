@@ -361,5 +361,44 @@
   <a href="mailto:signewilms@gmail.com">signewilms@gmail.com</a>
 </footer>
 
+<script>
+// Nupud - kontakt
+document.querySelector('.btn-primary').addEventListener('click', function() {
+  fbq('track', 'Contact', {content_name: 'Võta ühendust nupp'});
+});
+
+// Telefon ja email klikid
+document.querySelectorAll('.contact-item').forEach(function(el) {
+  el.addEventListener('click', function() {
+    var label = el.querySelector('.contact-item-label');
+    if (label) fbq('track', 'Contact', {content_name: label.textContent});
+  });
+});
+
+// Sektsioonide jälgimine - IntersectionObserver
+var sections = [
+  { id: 'meist', name: 'Minust' },
+  { id: 'teenused', name: 'Teenused' },
+  { id: 'hinnakiri', name: 'Hinnakiri' },
+  { id: 'arvamused', name: 'Arvamused' },
+  { id: 'kontakt', name: 'Kontakt' }
+];
+
+var fired = {};
+
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting && !fired[entry.target.id]) {
+      fired[entry.target.id] = true;
+      fbq('trackCustom', 'SectionView', {section: entry.target.id});
+    }
+  });
+}, { threshold: 0.3 });
+
+sections.forEach(function(s) {
+  var el = document.getElementById(s.id);
+  if (el) observer.observe(el);
+});
+</script>
 </body>
 </html>
