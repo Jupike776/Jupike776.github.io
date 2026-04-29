@@ -140,19 +140,19 @@
   .blogi-teaser p { font-size:1rem; font-weight:300; line-height:1.8; color:var(--mid); margin-bottom:32px; }
 
   /* CONTACT */
-  .contact { padding:120px 80px; background:var(--dark); color:white; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
-  .contact-content h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,3vw,3rem); font-weight:300; line-height:1.2; margin-bottom:20px; color:white; }
-  .contact-content h2 em { font-style:italic; color:var(--blue); }
-  .contact-content p { font-size:0.9rem; font-weight:300; line-height:1.8; color:rgba(255,255,255,0.6); margin-bottom:36px; }
+  .contact { padding:120px 80px; background:var(--peach); color:var(--dark); display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+  .contact-content h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,3vw,3rem); font-weight:300; line-height:1.2; margin-bottom:20px; color:var(--dark); }
+  .contact-content h2 em { font-style:italic; color:var(--blue-dark); }
+  .contact-content p { font-size:0.9rem; font-weight:300; line-height:1.8; color:var(--mid); margin-bottom:36px; }
   .contact-items { display:flex; flex-direction:column; gap:18px; }
-  .contact-item { display:flex; align-items:center; gap:14px; text-decoration:none; color:white; transition:opacity 0.2s; }
+  .contact-item { display:flex; align-items:center; gap:14px; text-decoration:none; color:var(--dark); transition:opacity 0.2s; }
   .contact-item:hover { opacity:0.7; }
-  .contact-item-icon { width:42px; height:42px; background:rgba(162,209,236,0.15); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0; }
-  .contact-item-label { font-size:0.66rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:2px; }
+  .contact-item-icon { width:42px; height:42px; background:var(--blue); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1rem; flex-shrink:0; }
+  .contact-item-label { font-size:0.66rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--mid); margin-bottom:2px; }
   .contact-item-text { font-size:0.88rem; font-weight:300; }
   .social-links { display:flex; gap:10px; margin-top:36px; }
-  .social-link { width:42px; height:42px; background:rgba(255,255,255,0.08); border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; text-decoration:none; font-size:0.9rem; transition:background 0.2s; font-weight:500; }
-  .social-link:hover { background:var(--blue); color:var(--dark); }
+  .social-link { width:42px; height:42px; background:var(--blue); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--dark); text-decoration:none; font-size:0.9rem; transition:background 0.2s; font-weight:500; }
+  .social-link:hover { background:var(--dark); color:white; }
   .contact-img { border-radius:8px; overflow:hidden; }
   .contact-img img { width:100%; height:100%; object-fit:cover; object-position:center; }
 
@@ -179,10 +179,10 @@
 
   /* CONTACT FORM */
   .contact-form-wrap { flex:1; }
-  .contact-form-wrap .ml-form-embedWrapper { background:rgba(255,255,255,0.05) !important; border-radius:8px !important; padding:8px !important; }
-  .contact-form-wrap input, .contact-form-wrap textarea { background:rgba(255,255,255,0.1) !important; color:white !important; border:1px solid rgba(255,255,255,0.2) !important; border-radius:4px !important; }
-  .contact-form-wrap input::placeholder, .contact-form-wrap textarea::placeholder { color:rgba(255,255,255,0.5) !important; }
-  .contact-form-wrap .ml-form-checkboxLabel { color:rgba(255,255,255,0.7) !important; }
+  .contact-form-wrap .ml-form-embedWrapper { background:white !important; border-radius:8px !important; padding:8px !important; box-shadow:0 4px 20px rgba(0,0,0,0.08) !important; }
+  .contact-form-wrap input, .contact-form-wrap textarea { background:white !important; color:var(--dark) !important; border:1.5px solid rgba(162,209,236,0.4) !important; border-radius:4px !important; }
+  .contact-form-wrap input::placeholder, .contact-form-wrap textarea::placeholder { color:rgba(0,0,0,0.35) !important; }
+  .contact-form-wrap .ml-form-checkboxLabel { color:var(--mid) !important; }
   .contact-form-wrap button[type=submit] { background:var(--blue) !important; color:var(--dark) !important; width:100% !important; border:none !important; padding:14px !important; border-radius:4px !important; font-weight:500 !important; cursor:pointer !important; }
 
   @media (max-width:900px) { .uudiskiri { padding:80px 24px; } }
@@ -190,10 +190,10 @@
 
   /* CONTACT FORM */
   .contact-form-wrap { flex:1; }
-  .contact-form-wrap .ml-form-embedWrapper { background:rgba(255,255,255,0.05) !important; border-radius:8px !important; padding:8px !important; }
-  .contact-form-wrap input, .contact-form-wrap textarea { background:rgba(255,255,255,0.1) !important; color:white !important; border:1px solid rgba(255,255,255,0.2) !important; border-radius:4px !important; }
-  .contact-form-wrap input::placeholder, .contact-form-wrap textarea::placeholder { color:rgba(255,255,255,0.5) !important; }
-  .contact-form-wrap .ml-form-checkboxLabel { color:rgba(255,255,255,0.7) !important; }
+  .contact-form-wrap .ml-form-embedWrapper { background:white !important; border-radius:8px !important; padding:8px !important; box-shadow:0 4px 20px rgba(0,0,0,0.08) !important; }
+  .contact-form-wrap input, .contact-form-wrap textarea { background:white !important; color:var(--dark) !important; border:1.5px solid rgba(162,209,236,0.4) !important; border-radius:4px !important; }
+  .contact-form-wrap input::placeholder, .contact-form-wrap textarea::placeholder { color:rgba(0,0,0,0.35) !important; }
+  .contact-form-wrap .ml-form-checkboxLabel { color:var(--mid) !important; }
   .contact-form-wrap button[type=submit] { background:var(--blue) !important; color:var(--dark) !important; width:100% !important; border:none !important; padding:14px !important; border-radius:4px !important; font-weight:500 !important; cursor:pointer !important; }
 
   @media (max-width:900px) {
