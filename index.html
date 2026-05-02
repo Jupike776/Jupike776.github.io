@@ -4,33 +4,35 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-TX8SGN01HX');
+  gtag('config', 'G-TX8SGN01HX', {'debug_mode': true});
 </script>
 <script>
-  // E-maili klikk
-  document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
-    el.addEventListener('click', function() {
-      gtag('event', 'email_click', {
-        'event_category': 'contact',
-        'event_label': this.href
+  document.addEventListener('DOMContentLoaded', function() {
+    // E-maili klikk
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        gtag('event', 'email_click', {
+          'event_category': 'contact',
+          'event_label': this.href
+        });
       });
     });
-  });
-  // Telefoni klikk
-  document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
-    el.addEventListener('click', function() {
-      gtag('event', 'phone_click', {
-        'event_category': 'contact',
-        'event_label': this.href
+    // Telefoni klikk
+    document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        gtag('event', 'phone_click', {
+          'event_category': 'contact',
+          'event_label': this.href
+        });
       });
     });
-  });
-  // Kontaktivormi täitmine
-  document.querySelectorAll('form').forEach(function(el) {
-    el.addEventListener('submit', function() {
-      gtag('event', 'contact_form_submit', {
-        'event_category': 'contact',
-        'event_label': 'contact_form'
+    // Kontaktivormi täitmine
+    document.querySelectorAll('form').forEach(function(el) {
+      el.addEventListener('submit', function() {
+        gtag('event', 'contact_form_submit', {
+          'event_category': 'contact',
+          'event_label': 'contact_form'
+        });
       });
     });
   });
