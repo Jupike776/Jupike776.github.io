@@ -2,10 +2,62 @@
 <html lang="et">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=https://signewilms.ee/">
-<title>Signe Wilms</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lehte ei leitud | Signe Wilms</title>
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://signewilms.ee/">
+<link rel="icon" type="image/svg+xml" href="/Signe-Wilms-logo.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #a2d1ec;
+    --peach: #ffeee9;
+    --dark: #2c2c2c;
+    --mid: #6b6b6b;
+    --light: #f9f6f4;
+    --white: #ffffff;
+    --blue-dark: #7bb8d8;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'DM Sans',sans-serif; color:var(--dark); background:var(--white); min-height:100vh; display:flex; flex-direction:column; }
+  nav { padding:18px 48px; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(162,209,236,0.2); }
+  .nav-logo { font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:600; color:var(--dark); text-decoration:none; }
+  main { flex:1; display:flex; align-items:center; justify-content:center; padding:80px 24px; background:var(--light); }
+  .error-wrap { text-align:center; max-width:480px; }
+  .error-code { font-family:'Cormorant Garamond',serif; font-size:clamp(6rem,15vw,10rem); font-weight:300; line-height:1; color:var(--blue); margin-bottom:8px; }
+  .error-title { font-family:'Cormorant Garamond',serif; font-size:clamp(1.6rem,3vw,2.2rem); font-weight:300; margin-bottom:16px; }
+  .error-title em { font-style:italic; color:var(--blue-dark); }
+  .error-desc { font-size:0.95rem; font-weight:300; line-height:1.8; color:var(--mid); margin-bottom:40px; }
+  .btn-primary { display:inline-block; background:var(--blue); color:var(--dark); padding:14px 32px; border-radius:4px; font-size:0.85rem; font-weight:500; letter-spacing:0.04em; text-decoration:none; transition:all 0.25s; }
+  .btn-primary:hover { background:var(--dark); color:white; transform:translateY(-1px); }
+  footer { background:#1a1a1a; padding:24px 48px; display:flex; justify-content:space-between; align-items:center; }
+  footer p { font-size:0.76rem; color:rgba(255,255,255,0.35); font-weight:300; }
+  footer a { color:rgba(255,255,255,0.35); text-decoration:none; font-size:0.76rem; }
+  footer a:hover { color:var(--blue); }
+  @media (max-width:600px) {
+    nav { padding:14px 20px; }
+    footer { padding:20px 24px; flex-direction:column; gap:8px; text-align:center; }
+  }
+</style>
 </head>
 <body>
-<p>Lehte ei leitud. <a href="https://signewilms.ee/">Tagasi avalehele →</a></p>
+<nav>
+  <a class="nav-logo" href="/">Signe Wilms</a>
+</nav>
+<main>
+  <div class="error-wrap">
+    <div class="error-code">404</div>
+    <h1 class="error-title">Lehte ei <em>leitud</em></h1>
+    <p class="error-desc">Otsitav leht on kustutatud, teisaldatud või sisestasid vale aadressi. Ärme muretse — avaleht on alati olemas.</p>
+    <a href="/" class="btn-primary">Tagasi avalehele →</a>
+  </div>
+</main>
+<footer>
+  <p>© 2026 Signe Wilms. Kõik õigused kaitstud.</p>
+  <a href="mailto:signewilms@gmail.com">signewilms@gmail.com</a>
+</footer>
 </body>
 </html>
