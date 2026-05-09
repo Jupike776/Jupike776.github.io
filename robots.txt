@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /wp-content/
+Disallow: /wp-includes/
+Disallow: /?page_id=
 
 Sitemap: https://signewilms.ee/sitemap.xml
