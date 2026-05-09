@@ -42,6 +42,12 @@
     footer { padding:20px 24px; flex-direction:column; gap:8px; text-align:center; }
   }
 </style>
+<script>
+  var p = decodeURIComponent(window.location.pathname);
+  if (p.indexOf('linkedin-tekstid') !== -1) {
+    window.location.replace('https://signewilms.ee/');
+  }
+</script>
 </head>
 <body>
 <nav>
