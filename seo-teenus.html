@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SEO seadistamine Eestis – tehniline SEO mikroettevõtjale | Signe Wilms</title>
-<meta name="description" content="SEO seadistamine Eestis: tehniline SEO, Google Analytics, structured data, otsingusõnade analüüs ja kodulehe optimeerimine. Tulemus: SEO skoor 100%.">
+<title>Kodulehe SEO seadistamine lihtsas keeles | Signe Wilms</title>
+<meta name="description" content="Kodulehe SEO seadistamine: Google leiab sinu lehe üles, tööriistad ühendatud, probleemid parandatud. 500€, ühekordne teenus koos kirjaliku raportiga.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://signewilms.ee/seo-teenus.html">
 <link rel="icon" type="image/svg+xml" href="Signe-Wilms-logo.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-<meta property="og:title" content="SEO seadistamine Eestis – tehniline SEO mikroettevõtjale | Signe Wilms">
-<meta property="og:description" content="SEO seadistamine Eestis: tehniline SEO, Google Analytics, structured data ja kodulehe optimeerimine. SEO skoor 100%.">
+<meta property="og:title" content="Kodulehe SEO seadistamine lihtsas keeles | Signe Wilms">
+<meta property="og:description" content="Kodulehe SEO seadistamine: Google leiab sinu lehe üles, tööriistad ühendatud, probleemid parandatud. 500€, ühekordne teenus.">
 <meta property="og:url" content="https://signewilms.ee/seo-teenus.html">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="et_EE">
@@ -19,8 +19,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "SEO seadistamine Eestis",
-  "description": "Tehniline SEO seadistamine Eestis mikroettevõtjatele. Sisaldab Google Analytics 4, structured data, otsingusõnade analüüsi, sitemap ja canonical URL-ide seadistamist.",
+  "name": "Kodulehe SEO seadistamine",
+  "description": "Kodulehe SEO seadistamine lihtsas keeles. Google leiab sinu lehe üles, vajalikud tööriistad ühendatud, probleemid parandatud. Kirjalik raport tehtud tööde kohta.",
   "provider": {
     "@type": "LocalBusiness",
     "name": "Signe Wilms",
@@ -34,7 +34,7 @@
     "@type": "Offer",
     "price": "500",
     "priceCurrency": "EUR",
-    "description": "Täielik SEO seadistamine ühekordse maksena"
+    "description": "Ühekordne SEO seadistamine koos kirjaliku raportiga"
   },
   "url": "https://signewilms.ee/seo-teenus.html"
 }
@@ -82,15 +82,39 @@
   .section-tag { display:inline-block; font-size:0.72rem; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:var(--dark); margin-bottom:14px; }
   .section h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3vw,2.6rem); font-weight:300; line-height:1.2; margin-bottom:40px; }
   .section h2 em { font-style:italic; color:var(--blue-dark); }
+  .bullet-list { list-style:none; display:flex; flex-direction:column; gap:12px; max-width:680px; }
+  .bullet-list li { font-size:0.92rem; font-weight:300; line-height:1.75; color:var(--mid); padding-left:20px; position:relative; }
+  .bullet-list li::before { content:"→"; position:absolute; left:0; color:var(--blue-dark); font-weight:500; }
   .what-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
   .what-item { background:white; border-radius:8px; padding:28px; border-left:3px solid var(--blue); }
   .what-item h3 { font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:600; margin-bottom:10px; }
   .what-item p { font-size:0.86rem; font-weight:300; line-height:1.75; color:var(--mid); }
+  .promise-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; max-width:860px; }
+  .promise-box { border-radius:8px; padding:32px; }
+  .promise-box.cant { background:var(--peach); }
+  .promise-box.can { background:var(--blue); }
+  .promise-box h3 { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; margin-bottom:20px; }
+  .promise-box ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
+  .promise-box ul li { font-size:0.86rem; font-weight:300; line-height:1.7; color:var(--dark); padding-left:18px; position:relative; }
+  .promise-box ul li::before { content:"·"; position:absolute; left:0; font-weight:700; }
   .process { display:flex; flex-direction:column; gap:24px; max-width:680px; }
   .process-step { display:flex; gap:24px; align-items:flex-start; }
   .step-num { width:40px; height:40px; background:var(--blue); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:600; flex-shrink:0; }
   .step-body h3 { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:600; margin-bottom:6px; }
   .step-body p { font-size:0.86rem; font-weight:300; line-height:1.75; color:var(--mid); }
+  .step-body ul { list-style:none; margin-top:8px; display:flex; flex-direction:column; gap:6px; }
+  .step-body ul li { font-size:0.84rem; font-weight:300; line-height:1.7; color:var(--mid); padding-left:16px; position:relative; }
+  .step-body ul li::before { content:"·"; position:absolute; left:0; font-weight:700; color:var(--blue-dark); }
+  .result-list { list-style:none; display:flex; flex-direction:column; gap:12px; max-width:600px; margin-bottom:32px; }
+  .result-list li { font-size:0.92rem; font-weight:300; line-height:1.75; color:var(--mid); padding-left:20px; position:relative; }
+  .result-list li::before { content:"✓"; position:absolute; left:0; color:var(--blue-dark); font-weight:500; }
+  .price-box { background:var(--light); border-radius:8px; padding:40px; max-width:560px; }
+  .price-amount { font-family:'Cormorant Garamond',serif; font-size:3rem; font-weight:300; margin-bottom:6px; }
+  .price-amount span { font-size:1rem; font-family:'DM Sans',sans-serif; font-weight:300; color:var(--mid); }
+  .price-note { font-size:0.82rem; font-weight:300; color:var(--mid); margin-bottom:24px; }
+  .price-includes { list-style:none; display:flex; flex-direction:column; gap:10px; margin-bottom:32px; }
+  .price-includes li { font-size:0.86rem; font-weight:300; line-height:1.7; color:var(--mid); padding-left:18px; position:relative; }
+  .price-includes li::before { content:"✓"; position:absolute; left:0; color:var(--blue-dark); font-weight:500; }
   .cta-section { text-align:center; padding:100px 80px; background:var(--dark); color:white; }
   .cta-section h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,3vw,3rem); font-weight:300; margin-bottom:16px; }
   .cta-section h2 em { font-style:italic; color:var(--blue); }
@@ -108,6 +132,7 @@
     .hero { grid-template-columns:1fr; padding:120px 24px 60px; gap:40px; }
     .section { padding:60px 24px; }
     .what-grid { grid-template-columns:1fr; }
+    .promise-grid { grid-template-columns:1fr; }
     .cta-section { padding:60px 24px; }
     footer { padding:20px 24px; flex-direction:column; gap:8px; text-align:center; }
   }
@@ -129,100 +154,158 @@
 
 <section class="hero">
   <div>
-    <span class="hero-tag">SEO seadistamine Eestis</span>
-    <h1>Tehniline SEO, mis <em>päriselt töötab</em></h1>
-    <p class="hero-sub">Seadistan su kodulehe nii, et Google leiab sind. Mitte lubadused – vaid mõõdetavad tulemused. SEO skoor 100%, nähtavus otsingutes ja täpne ülevaade kust kliendid tulevad.</p>
-    <div class="hero-price">500€ <span>/ ühekordne SEO seadistamine</span></div>
+    <span class="hero-tag">Kodulehe SEO seadistamine</span>
+    <h1>Mida see lihtsas keeles <em>tähendab?</em></h1>
+    <p class="hero-sub">Kui inimene otsib Google'ist sinu teenust või toodet, siis aitab SEO sinu veebilehel otsingutulemustes paremini välja tulla.</p>
+    <div class="hero-price">500€ <span>/ ühekordne teenus</span></div>
     <div class="hero-cta">
       <a href="/#kontakt" class="btn-primary">Telli SEO seadistamine</a>
-      <a href="/#hinnakiri" class="btn-secondary">Vaata hinnakirja</a>
+      <a href="#mis-sisaldab" class="btn-secondary">Mis sisaldab?</a>
     </div>
   </div>
   <div class="hero-visual">
     <div class="stat">
-      <div class="stat-number">100%</div>
-      <div class="stat-label">Google SEO skoor pärast seadistamist</div>
-    </div>
-    <div class="stat">
       <div class="stat-number">500€</div>
-      <div class="stat-label">Täielik SEO pakett – ühekordne makse</div>
+      <div class="stat-label">Ühekordne makse, ei mingit kuutasu</div>
     </div>
     <div class="stat">
-      <div class="stat-number">ET·RU·DE·EN</div>
-      <div class="stat-label">SEO seadistamine neljas keeles</div>
+      <div class="stat-number">3 sammu</div>
+      <div class="stat-label">Lihtne ja selge protsess</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">0</div>
+      <div class="stat-label">Kohustust jätkata pärast seadistamist</div>
     </div>
   </div>
 </section>
 
 <section class="section light">
-  <span class="section-tag">Mida sisaldab SEO seadistamine Eestis</span>
-  <h2>Tehniline SEO – <em>täielik pakett</em></h2>
+  <span class="section-tag">Kas see kõlab tuttavalt?</span>
+  <h2>Paljudel ettevõtetel on koduleht olemas, <em>aga…</em></h2>
+  <ul class="bullet-list">
+    <li>Google ei leia seda hästi üles.</li>
+    <li>Leht avaneb aeglaselt.</li>
+    <li>Telefonis on seda halb kasutada.</li>
+    <li>Külastaja ei saa aru, mida ettevõte pakub.</li>
+    <li>Või inimesed käivad lehel, aga ühendust ei võta.</li>
+  </ul>
+  <br>
+  <p style="font-size:0.95rem;font-weight:300;line-height:1.8;color:var(--mid);max-width:600px;margin-top:24px;">SEO seadistamine aitab need probleemid üles leida ja parandada. Mina vaatan sinu kodulehe üle ning teen vajalikud seadistused, et Google saaks sinu lehest aru, inimesed leiaksid sind lihtsamini üles ja sinu leht töötaks tehniliselt paremini.</p>
+</section>
+
+<section class="section" id="mis-sisaldab">
+  <span class="section-tag">Mida ma teen?</span>
+  <h2>Kontrollin <em>näiteks</em></h2>
   <div class="what-grid">
     <div class="what-item">
-      <h3>Google Analytics 4</h3>
-      <p>Seadistan GA4 nii, et näed täpselt, kes su lehel käib, kust tulevad ja mida teevad. Eesmärgid, sündmused, konversioonid – kõik mõõdetud.</p>
+      <h3>Google'i leitavus</h3>
+      <p>Kas Google leiab sinu lehed üles ja kas kõik lingid töötavad korralikult.</p>
     </div>
     <div class="what-item">
-      <h3>Structured Data</h3>
-      <p>Lisan JSON-LD structured data, mis ütleb Googlele täpselt, kes sa oled ja mida pakud. Suurendab nähtavust otsingutulemustes.</p>
+      <h3>Kiirus ja mobiil</h3>
+      <p>Kui kiiresti leht avaneb ja kas leht töötab telefonis korralikult.</p>
     </div>
     <div class="what-item">
-      <h3>Otsingusõnade analüüs</h3>
-      <p>Leian sõnad, millega su kliendid sind otsivad – ja optimeerin lehe sisu, pealkirjad ja meta kirjeldused nende järgi.</p>
+      <h3>Tekstid ja pealkirjad</h3>
+      <p>Kas tekstid ja pealkirjad on arusaadavad ja kas sinu teenused on Google'i jaoks selgelt kirjeldatud.</p>
     </div>
     <div class="what-item">
-      <h3>Tehniline SEO</h3>
-      <p>Sitemap, canonical URL-id, robots.txt, pealkirjade hierarhia, alt-tekstid – kõik tehniline, mis mõjutab, kuidas Google su lehte hindab.</p>
+      <h3>Google'i tööriistad</h3>
+      <p>Seadistan Google Analyticsi, mis näitab kui palju inimesi sinu lehte külastab, ning Google Search Console'i, mis aitab jälgida sinu nähtavust Google'is. Ja muud vajalikud SEO seadistused.</p>
     </div>
     <div class="what-item">
-      <h3>Google Search Console</h3>
-      <p>Seadistan Search Console, esitan sitemap ja taotlen indekseerimist. Tead alati, mis lehed on Googles ja mis ei ole.</p>
+      <h3>Tekstide parandamine</h3>
+      <p>Vaatan üle sinu lehe tekstid ja pealkirjad ning aitan neid parandada nii, et inimesed leiaksid sind otsingust lihtsamini üles.</p>
     </div>
     <div class="what-item">
       <h3>Kirjalik raport</h3>
-      <p>Saad kirjaliku raporti kõigest tehtu kohta – et tead, mis on tehtud ja miks. Selge ülevaade ilma tehnikakõneluseta.</p>
+      <p>Saad kirjaliku raporti kus on kirjas: mida ma tegin, miks see oluline on ja mida see sinu jaoks paremaks teeb.</p>
     </div>
   </div>
 </section>
 
-<section class="section">
-  <span class="section-tag">Kuidas protsess toimib</span>
-  <h2>SEO seadistamine <em>sammhaaval</em></h2>
+<section class="section light">
+  <span class="section-tag">Kuidas see sinu jaoks välja näeb?</span>
+  <h2>Lihtne <em>protsess</em></h2>
   <div class="process">
     <div class="process-step">
       <div class="step-num">1</div>
       <div class="step-body">
-        <h3>Audit ja analüüs</h3>
-        <p>Vaatan su praeguse kodulehe olukorra üle – mis töötab, mis ei tööta ja mis takistab Googlel sind leidmast.</p>
+        <h3>Sa kirjutad mulle või saadad oma kodulehe aadressi</h3>
+        <p>Midagi muud ette valmistama ei pea.</p>
       </div>
     </div>
     <div class="process-step">
       <div class="step-num">2</div>
       <div class="step-body">
-        <h3>Tehniline SEO seadistamine</h3>
-        <p>Seadistan kõik tehnilise osa: Analytics, Search Console, structured data, sitemap, meta sildid, pealkirjad.</p>
+        <h3>Vaatan sinu lehe üle ja ütlen ausalt</h3>
+        <ul>
+          <li>mis töötab hästi;</li>
+          <li>mis vajab parandamist;</li>
+          <li>ja kas SEO seadistamine oleks sinu puhul üldse vajalik.</li>
+        </ul>
       </div>
     </div>
     <div class="process-step">
       <div class="step-num">3</div>
       <div class="step-body">
-        <h3>Sisu optimeerimine</h3>
-        <p>Optimeerin pealkirjad, meta kirjeldused ja lehe sisu otsingusõnade järgi – loomulikult, mitte tehislikult.</p>
-      </div>
-    </div>
-    <div class="process-step">
-      <div class="step-num">4</div>
-      <div class="step-body">
-        <h3>Raport ja üleandmine</h3>
-        <p>Saad kirjaliku raporti kõigest tehtu kohta. Selgitan, mida tegin ja miks – nii tead ise ka edaspidi.</p>
+        <h3>Kui soovid edasi minna, teen vajalikud seadistused sinu eest ära</h3>
+        <p>Saad kirjaliku raporti, kus selgitan: mida ma tegin, miks see oluline on ja mida see sinu jaoks paremaks teeb.</p>
       </div>
     </div>
   </div>
 </section>
 
+<section class="section">
+  <span class="section-tag">Aus ülevaade</span>
+  <h2>Mida ma saan ja <em>ei saa lubada</em></h2>
+  <div class="promise-grid">
+    <div class="promise-box cant">
+      <h3>Ma ei saa lubada:</h3>
+      <ul>
+        <li>Kindlat kohta Google'is.</li>
+        <li>Kindlat klientide arvu.</li>
+        <li>Kiiret edu paari päevaga.</li>
+      </ul>
+      <p style="font-size:0.82rem;font-weight:300;line-height:1.75;color:var(--mid);margin-top:20px;">Google'i tulemusi mõjutavad paljud asjad: konkurents, sinu valdkond, kodulehe sisu ja see, kui aktiivne sinu ettevõte internetis on.</p>
+    </div>
+    <div class="promise-box can">
+      <h3>Ma saan lubada, et:</h3>
+      <ul>
+        <li>Sinu kodulehe tehniline SEO saab korrektselt seadistatud.</li>
+        <li>Google saab sinu lehest paremini aru.</li>
+        <li>Vajalikud tööriistad saavad ühendatud.</li>
+        <li>Võimalikud probleemid saavad parandatud.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section light">
+  <span class="section-tag">Tulemus</span>
+  <h2>Mida sina selle tulemusena <em>saad?</em></h2>
+  <ul class="result-list">
+    <li>Parema nähtavuse Google'is.</li>
+    <li>Kiirema ja korrastatud kodulehe.</li>
+    <li>Parema ülevaate oma külastajatest.</li>
+    <li>Suurema võimaluse, et külastajast saab klient.</li>
+  </ul>
+  <div class="price-box">
+    <div class="price-amount">500€ <span>/ ühekordne teenus</span></div>
+    <p class="price-note">Ei mingit kuutasu ega kohustust jätkata.</p>
+    <ul class="price-includes">
+      <li>Tehnilist SEO seadistamist.</li>
+      <li>Google'i tööriistade ühendamist.</li>
+      <li>Lehe kontrolli ja parandusi.</li>
+      <li>Kirjalikku raportit tehtud tööde kohta.</li>
+    </ul>
+    <a href="/#kontakt" class="btn-primary">Telli SEO seadistamine →</a>
+  </div>
+</section>
+
 <section class="cta-section">
   <h2>Valmis, et <em>Google sind leiaks?</em></h2>
-  <p>Tehniline SEO seadistamine Eestis – 500€, ühekordne makse. Esimene vestlus on tasuta ja kohustuseta.</p>
+  <p>500€, ühekordne makse. Esimene vestlus on tasuta ja kohustuseta.</p>
   <a href="/#kontakt" class="btn-primary">Võta ühendust →</a>
 </section>
 
