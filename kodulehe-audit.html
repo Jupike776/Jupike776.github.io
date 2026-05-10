@@ -94,6 +94,14 @@
   .result-list li { font-size:0.92rem; font-weight:300; line-height:1.7; color:var(--mid); padding-left:20px; position:relative; list-style:none; }
   .result-list li::before { content:"✓"; position:absolute; left:0; color:var(--blue-dark); font-weight:500; }
   .result-note { font-size:0.88rem; font-weight:300; line-height:1.75; color:var(--mid); max-width:600px; }
+  .promise-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; max-width:860px; }
+  .promise-box { border-radius:8px; padding:32px; }
+  .promise-box.cant { background:var(--peach); }
+  .promise-box.can { background:var(--blue); }
+  .promise-box h3 { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; margin-bottom:20px; }
+  .promise-box ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
+  .promise-box ul li { font-size:0.86rem; font-weight:300; line-height:1.7; color:var(--dark); padding-left:18px; position:relative; }
+  .promise-box ul li::before { content:"·"; position:absolute; left:0; font-weight:700; }
   .process { display:flex; flex-direction:column; gap:24px; max-width:680px; }
   .process-step { display:flex; gap:24px; align-items:flex-start; }
   .step-num { width:40px; height:40px; background:var(--blue); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:600; flex-shrink:0; }
@@ -116,6 +124,7 @@
     .hero { grid-template-columns:1fr; padding:120px 24px 60px; gap:40px; }
     .section { padding:60px 24px; }
     .what-grid { grid-template-columns:1fr; }
+    .promise-grid { grid-template-columns:1fr; }
     .cta-section { padding:60px 24px; }
     footer { padding:20px 24px; flex-direction:column; gap:8px; text-align:center; }
   }
@@ -243,6 +252,31 @@
     <li>Mida tasub parandada ja millised muudatused annavad kõige kiirema mõju.</li>
   </ul>
   <p class="result-note">See aitab sul teha paremaid otsuseid enne, kui investeerid rohkem raha reklaami või uude veebilehte. Ja kui sa usaldad mind, saan aidata ka muudatused ise ära teha – sel juhul räägime eraldi hinna läbi.</p>
+</section>
+
+<section class="section light">
+  <span class="section-tag">Aus ülevaade</span>
+  <h2>Mida ma saan ja <em>ei saa lubada</em></h2>
+  <div class="promise-grid">
+    <div class="promise-box cant">
+      <h3>Ma ei saa lubada:</h3>
+      <ul>
+        <li>Kindlat arvu uusi kliente pärast auditit.</li>
+        <li>Et kõik probleemid saavad kohe parandatud.</li>
+        <li>Kohest Google'i positsiooni tõusu.</li>
+      </ul>
+      <p style="font-size:0.82rem;font-weight:300;line-height:1.75;color:var(--mid);margin-top:20px;">Audit on ülevaade ja soovitused – muudatuste tegemine on eraldi töö, mida saame vajaduse korral koos planeerida.</p>
+    </div>
+    <div class="promise-box can">
+      <h3>Ma saan lubada, et:</h3>
+      <ul>
+        <li>Saad kirjaliku raporti konkreetsete soovitustega.</li>
+        <li>Tead täpselt, mis su lehel ei tööta ja miks.</li>
+        <li>Raport on kirjutatud lihtsas keeles, ilma keeruliste tehnilisteta väljenditeta.</li>
+        <li>Audit on tehtud 4–5 tööpäeva jooksul.</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <section class="cta-section">
