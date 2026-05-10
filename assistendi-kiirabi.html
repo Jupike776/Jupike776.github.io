@@ -20,7 +20,9 @@
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Assistendi kiirabi",
+  "serviceType": "Äriassistent",
   "description": "Kiire äriassistendi abi samal päeval. 50€/tund, minimaalselt 30 minutit. Koduleht, uudiskiri, meiliturundus ja muud ülesanded.",
+  "areaServed": { "@type": "Country", "name": "Estonia" },
   "provider": {
     "@type": "LocalBusiness",
     "name": "Signe Wilms",
@@ -34,6 +36,13 @@
     "@type": "Offer",
     "price": "50",
     "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock",
+    "priceSpecification": {
+      "@type": "UnitPriceSpecification",
+      "price": "50",
+      "priceCurrency": "EUR",
+      "unitCode": "HUR"
+    },
     "description": "50€/tund, minimaalselt 30 minutit (25€)"
   },
   "url": "https://signewilms.ee/assistendi-kiirabi.html"
