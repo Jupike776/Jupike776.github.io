@@ -48,6 +48,34 @@
   "url": "https://signewilms.ee/assistendi-kiirabi.html"
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Kui kiiresti saab abi?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Enamasti samal päeval. Broneeri aeg hommikul ja õhtuks on ülesanne tehtud. Kui päev on juba täis, lepime kokku järgmise päeva." }
+    },
+    {
+      "@type": "Question",
+      "name": "Kas on vaja lepingut sõlmida?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ei. Kirjuta mulle, selgitame ülesande, saan aega broneerida ja asume tööle. Arve saad pärast töö tegemist." }
+    },
+    {
+      "@type": "Question",
+      "name": "Millega täpselt aitate?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Kodulehe uuendused ja väiksed parandused, uudiskirja koostamine ja saatmine, meiliturunduse seadistamine, webinari tehniline tugi, kodulehe tehniline probleem, pluss muud väiksed ülesanded mida saab arvutis lahendada." }
+    },
+    {
+      "@type": "Question",
+      "name": "Mis juhtub, kui ülesanne võtab rohkem aega?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ütlen ausalt ette, kui näen et 30–60 minutit ei piisa. Sa saad otsustada, kas jätkata või mitte. Ei lase kellelgi üllatusarvet saada." }
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -123,6 +151,15 @@
   .price-includes li { font-size:0.86rem; font-weight:300; line-height:1.7; color:var(--mid); padding-left:18px; position:relative; }
   .price-includes li::before { content:"✓"; position:absolute; left:0; color:var(--blue-dark); font-weight:500; }
   .cta-section { text-align:center; padding:100px 80px; background:var(--dark); color:white; }
+  .faq-section { padding:100px 80px; background:var(--light); }
+  .faq-section h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3vw,2.6rem); font-weight:300; text-align:center; margin-bottom:48px; }
+  .faq-list { max-width:760px; margin:0 auto; }
+  .faq-item { border-bottom:1px solid rgba(162,209,236,0.35); }
+  .faq-question { width:100%; background:none; border:none; text-align:left; padding:22px 0; font-family:'DM Sans',sans-serif; font-size:0.95rem; font-weight:500; color:var(--dark); cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:16px; }
+  .faq-question::after { content:'+'; font-size:1.4rem; font-weight:300; color:var(--blue-dark); flex-shrink:0; transition:transform 0.2s; }
+  .faq-item.open .faq-question::after { transform:rotate(45deg); }
+  .faq-answer { max-height:0; overflow:hidden; transition:max-height 0.3s ease; }
+  .faq-answer p { font-size:0.88rem; font-weight:300; line-height:1.8; color:var(--mid); padding-bottom:20px; }
   .cta-section h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,3vw,3rem); font-weight:300; margin-bottom:16px; }
   .cta-section h2 em { font-style:italic; color:var(--blue); }
   .cta-section p { font-size:0.95rem; font-weight:300; color:rgba(255,255,255,0.65); margin-bottom:36px; max-width:480px; margin-left:auto; margin-right:auto; line-height:1.8; }
@@ -292,6 +329,45 @@
     <a href="https://zcal.co/i/UC-hlT7S" target="_blank" rel="noopener" class="btn-primary">Broneeri aeg kohe →</a>
   </div>
 </section>
+
+<section class="faq-section">
+  <h2>Korduma kippuvad küsimused</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question">Kui kiiresti saab abi?</button>
+      <div class="faq-answer"><p>Enamasti samal päeval. Broneeri aeg hommikul ja õhtuks on ülesanne tehtud. Kui päev on juba täis, lepime kokku järgmise päeva.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Kas on vaja lepingut sõlmida?</button>
+      <div class="faq-answer"><p>Ei. Kirjuta mulle, selgitame ülesande, saan aega broneerida ja asume tööle. Arve saad pärast töö tegemist.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Millega täpselt aitate?</button>
+      <div class="faq-answer"><p>Kodulehe uuendused ja väiksed parandused, uudiskirja koostamine ja saatmine, meiliturunduse seadistamine, webinari tehniline tugi, kodulehe tehniline probleem, pluss muud väiksed ülesanded mida saab arvutis lahendada.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Mis juhtub, kui ülesanne võtab rohkem aega?</button>
+      <div class="faq-answer"><p>Ütlen ausalt ette, kui näen et 30–60 minutit ei piisa. Sa saad otsustada, kas jätkata või mitte. Ei lase kellelgi üllatusarvet saada.</p></div>
+    </div>
+  </div>
+</section>
+<script>
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = this.parentElement;
+      var answer = item.querySelector('.faq-answer');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i) {
+        i.classList.remove('open');
+        i.querySelector('.faq-answer').style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
 
 <section class="cta-section">
   <h2>Vaja kiiret abi <em>täna?</em></h2>

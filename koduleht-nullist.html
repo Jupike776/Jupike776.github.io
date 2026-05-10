@@ -42,6 +42,34 @@
   "url": "https://signewilms.ee/koduleht-nullist.html"
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Kas koduleht on tõesti valmis 7 päevaga?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Jah, kui sisu on olemas. Vajan sinult logo, paar fotot, teenuste kirjeldused ja kontaktinfo. Kui need on olemas, alustame kohe ja 7 päeva pärast on leht live." }
+    },
+    {
+      "@type": "Question",
+      "name": "Mis platvormil koduleht tehakse?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Peamiselt WordPressil — maailma populaarseim kodulehe platvorm, mida on lihtne ise edasi hallata. Väiksema lehe puhul võin teha ka puhta koodiga, mis on kiirem ja odavam majutada." }
+    },
+    {
+      "@type": "Question",
+      "name": "Kas saan pärast ise muudatusi teha?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Jah. WordPressis saad ise tekste muuta, pilte vahetada ja blogisse postitusi lisada — ilma arendajata. 30 päeva jooksul pärast lehe valmimist saan kõiki küsimusi tasuta vastata." }
+    },
+    {
+      "@type": "Question",
+      "name": "Kas 400€ on kõik või tuleb juurde maksta?",
+      "acceptedAnswer": { "@type": "Answer", "text": "400€ on arenduse hind. Lisaks maksad domeeni (~12€/a) ja majutuse (~5–10€/kuus) ise otse teenusepakkujale. Peidetud tasusid ei ole." }
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -116,6 +144,15 @@
   .price-includes li { font-size:0.86rem; font-weight:300; line-height:1.7; color:var(--mid); padding-left:18px; position:relative; }
   .price-includes li::before { content:"✓"; position:absolute; left:0; color:var(--blue-dark); font-weight:500; }
   .cta-section { text-align:center; padding:100px 80px; background:var(--dark); color:white; }
+  .faq-section { padding:100px 80px; background:var(--light); }
+  .faq-section h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3vw,2.6rem); font-weight:300; text-align:center; margin-bottom:48px; }
+  .faq-list { max-width:760px; margin:0 auto; }
+  .faq-item { border-bottom:1px solid rgba(162,209,236,0.35); }
+  .faq-question { width:100%; background:none; border:none; text-align:left; padding:22px 0; font-family:'DM Sans',sans-serif; font-size:0.95rem; font-weight:500; color:var(--dark); cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:16px; }
+  .faq-question::after { content:'+'; font-size:1.4rem; font-weight:300; color:var(--blue-dark); flex-shrink:0; transition:transform 0.2s; }
+  .faq-item.open .faq-question::after { transform:rotate(45deg); }
+  .faq-answer { max-height:0; overflow:hidden; transition:max-height 0.3s ease; }
+  .faq-answer p { font-size:0.88rem; font-weight:300; line-height:1.8; color:var(--mid); padding-bottom:20px; }
   .cta-section h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,3vw,3rem); font-weight:300; margin-bottom:16px; }
   .cta-section h2 em { font-style:italic; color:var(--blue); }
   .cta-section p { font-size:0.95rem; font-weight:300; color:rgba(255,255,255,0.65); margin-bottom:36px; max-width:480px; margin-left:auto; margin-right:auto; line-height:1.8; }
@@ -303,6 +340,45 @@
     <a href="/#kontakt" class="btn-primary">Telli koduleht →</a>
   </div>
 </section>
+
+<section class="faq-section">
+  <h2>Korduma kippuvad küsimused</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question">Kas koduleht on tõesti valmis 7 päevaga?</button>
+      <div class="faq-answer"><p>Jah, kui sisu on olemas. Vajan sinult: logo (või teeme lihtsa), paar fotot, teenuste kirjeldused ja kontaktinfo. Kui need on olemas, alustame kohe ja 7 päeva pärast on leht live. Sisu kogumine ja kirjutamine võib lisaaega võtta — sellest räägime enne algust.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Mis platvormil koduleht tehakse?</button>
+      <div class="faq-answer"><p>Peamiselt WordPressil — see on maailma populaarseim kodulehe platvorm, mida on lihtne ise edasi hallata. Väiksema lehe puhul võin teha ka puhta koodiga (HTML/CSS), mis on kiirem ja odavam majutada. Räägime läbi, mis sulle sobib.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Kas saan pärast ise muudatusi teha?</button>
+      <div class="faq-answer"><p>Jah. WordPressis saad ise tekste muuta, pilte vahetada ja blogisse postitusi lisada — ilma arendajata. 30 päeva jooksul pärast lehe valmimist saan kõiki küsimusi tasuta vastata.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Kas 400€ on kõik või tuleb juurde maksta?</button>
+      <div class="faq-answer"><p>400€ on arenduse hind. Lisaks maksad domeeni (~12€/a) ja majutuse (~5–10€/kuus) ise otse teenusepakkujale — see on sinu oma vara, mitte minu kaudu. Peidetud tasusid ei ole.</p></div>
+    </div>
+  </div>
+</section>
+<script>
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = this.parentElement;
+      var answer = item.querySelector('.faq-answer');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i) {
+        i.classList.remove('open');
+        i.querySelector('.faq-answer').style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
 
 <section class="cta-section">
   <h2>Valmis saama <em>oma kodulehe?</em></h2>
