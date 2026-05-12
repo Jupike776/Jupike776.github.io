@@ -76,14 +76,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5PX8WGG4');</script>
 <!-- End Google Tag Manager -->
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TX8SGN01HX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-TX8SGN01HX');
-</script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     // E-maili klikk
@@ -558,11 +550,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- BOOKING -->
-<section class="section light" id="broneeri" style="text-align:center;">
+<section class="section light" id="broneeri" style="text-align:center; padding:80px 24px;">
   <span class="section-tag">Tasuta vestlus</span>
   <h2>Broneeri <em>aeg kohtumiseks</em></h2>
-  <script type="text/javascript" async src="https://static.zcal.co/embed/v1/embed.js"></script>
-<div class="zcal-inline-widget"><a href="https://zcal.co/i/GhMRsgoU">Tasuta kohtumine - Schedule a meeting</a></div>
+  <div id="zcal-container" style="margin-top:32px;">
+    <a href="https://zcal.co/i/GhMRsgoU" target="_blank" rel="noopener" class="btn-primary" id="zcal-open-btn" style="display:inline-block;">Ava kalender ja broneeri aeg →</a>
+    <div id="zcal-widget" style="display:none;"></div>
+  </div>
+  <script>
+    document.getElementById('zcal-open-btn').addEventListener('click', function(e) {
+      e.preventDefault();
+      var container = document.getElementById('zcal-widget');
+      if (container.innerHTML === '') {
+        var s = document.createElement('script');
+        s.src = 'https://static.zcal.co/embed/v1/embed.js';
+        s.onload = function() {
+          container.innerHTML = '<div class="zcal-inline-widget"><a href="https://zcal.co/i/GhMRsgoU">Tasuta kohtumine</a></div>';
+        };
+        document.body.appendChild(s);
+      }
+      document.getElementById('zcal-open-btn').style.display = 'none';
+      container.style.display = 'block';
+    });
+  </script>
 </section>
 
   <!-- CONTACT -->
@@ -722,25 +732,25 @@ sections.forEach(function(s) {
       $('.ml-subscribe-form-40524620 .row-form').hide();
     }
   </script>
-  <script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b" type="text/javascript"></script>
+  <script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b" type="text/javascript" defer>
   <script>
     fetch("https://assets.mailerlite.com/jsonp/852898/forms/185991733923809154/takel")
   </script>
-<!-- Meta Pixel -->
+<!-- Meta Pixel (lazy) -->
 <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1517080415512965');
-  fbq('track', 'PageView');
+  !function(f,b,e,v,n,t,s){
+    if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];
+  }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','1517080415512965');
+  fbq('track','PageView');
+  window.addEventListener('load',function(){
+    var s=document.createElement('script');s.async=true;
+    s.src='https://connect.facebook.net/en_US/fbevents.js';
+    document.head.appendChild(s);
+  });
 </script>
-<noscript><img height="1" width="1" alt="" style="display:none"
-  src="https://www.facebook.com/tr?id=1517080415512965&ev=PageView&noscript=1"
-/></noscript>
 </body>
 </html>
