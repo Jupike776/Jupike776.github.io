@@ -65,7 +65,8 @@
 <meta name="twitter:description" content="Koduleht nullist 7 päevaga, SEO seadistamine ja kodulehe haldus mikroettevõtjatele — Signe Wilms. Hinnad alates 50€. Esimene vestlus tasuta!">
 <meta name="twitter:image" content="https://signewilms.ee/repository-open-graph-template.png">
 <link rel="preload" as="image" href="signe-hero.webp" fetchpriority="high">
-<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/cormorant-garamond-n300.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/dm-sans-n300.woff2" crossorigin>
 <!-- Google Tag Manager (deferred) -->
 <script>
 window.dataLayer=window.dataLayer||[];
@@ -111,6 +112,9 @@ window.addEventListener('load',function(){
   });
 </script>
 <style>
+  @font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300 400;font-display:optional;src:url('/fonts/cormorant-garamond-i300.woff2') format('woff2')}
+  @font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300 400 600;font-display:optional;src:url('/fonts/cormorant-garamond-n300.woff2') format('woff2')}
+  @font-face{font-family:'DM Sans';font-style:normal;font-weight:300 400 500;font-display:optional;src:url('/fonts/dm-sans-n300.woff2') format('woff2')}
   :root {
     --blue: #a2d1ec;
     --peach: #ffeee9;
@@ -702,17 +706,6 @@ sections.forEach(function(s) {
   if (el) observer.observe(el);
 });
 </script>
-  <script>
-    function ml_webform_success_40524620() {
-      var $ = ml_jQuery || jQuery;
-      $('.ml-subscribe-form-40524620 .row-success').show();
-      $('.ml-subscribe-form-40524620 .row-form').hide();
-    }
-  </script>
-  <script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b" type="text/javascript" defer></script>
-  <script defer>
-    fetch("https://assets.mailerlite.com/jsonp/852898/forms/185991733923809154/takel")
-  </script>
 <!-- MailerLite Universal (deferred) -->
 <script>
 (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
