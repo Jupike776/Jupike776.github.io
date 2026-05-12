@@ -9,7 +9,13 @@
 <meta name="description" content="Kodulehe loomine, SEO seadistamine ja kodulehe haldus Eestis – Signe Wilms. Koduleht valmis 7 päevaga, SEO audit ja äriassistents mikroettevõtjatele. Esimene vestlus tasuta!">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://signewilms.ee/">
-<script>if(window.location.search)window.location.replace('https://signewilms.ee/');</script>
+<script>
+if(window.location.search){
+  var m=document.createElement('meta');m.name='robots';m.content='noindex,nofollow';
+  document.head.appendChild(m);
+  window.location.replace('https://signewilms.ee/');
+}
+</script>
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="Signe-Wilms-logo.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
