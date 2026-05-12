@@ -550,26 +550,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="section light" id="broneeri" style="text-align:center; padding:80px 24px;">
   <span class="section-tag">Tasuta vestlus</span>
   <h2>Broneeri <em>aeg kohtumiseks</em></h2>
-  <div id="zcal-container" style="margin-top:32px;">
-    <a href="https://zcal.co/i/GhMRsgoU" target="_blank" rel="noopener" class="btn-primary" id="zcal-open-btn" style="display:inline-block;">Ava kalender ja broneeri aeg →</a>
-    <div id="zcal-widget" style="display:none;"></div>
+  <div style="margin-top:32px;">
+    <a href="https://zcal.co/i/GhMRsgoU" target="_blank" rel="noopener" class="btn-primary">Broneeri tasuta aeg →</a>
   </div>
-  <script>
-    document.getElementById('zcal-open-btn').addEventListener('click', function(e) {
-      e.preventDefault();
-      var container = document.getElementById('zcal-widget');
-      if (container.innerHTML === '') {
-        var s = document.createElement('script');
-        s.src = 'https://static.zcal.co/embed/v1/embed.js';
-        s.onload = function() {
-          container.innerHTML = '<div class="zcal-inline-widget"><a href="https://zcal.co/i/GhMRsgoU">Tasuta kohtumine</a></div>';
-        };
-        document.body.appendChild(s);
-      }
-      document.getElementById('zcal-open-btn').style.display = 'none';
-      container.style.display = 'block';
-    });
-  </script>
 </section>
 
   <!-- CONTACT -->
