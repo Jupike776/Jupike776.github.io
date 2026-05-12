@@ -66,21 +66,38 @@
       "@type": "Question",
       "name": "Kas 400€ on kõik või tuleb juurde maksta?",
       "acceptedAnswer": { "@type": "Answer", "text": "400€ on arenduse hind. Lisaks maksad domeeni (~12€/a) ja majutuse (~5–10€/kuus) ise otse teenusepakkujale. Peidetud tasusid ei ole." }
+    },
+    {
+      "@type": "Question",
+      "name": "Miks ei tasu kasutada Wix-i, Squarespace-i ega AI veebileheehitajat?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Need tööriistad sobivad kiireks katsetamiseks, aga neil on olulised piirangud: leht on aeglasem, SEO on keerulisem seadistada ja sa oled nende platvormi külge lukustatud. WordPressil nullist ehitatud leht on kiirem, paremini leitav ja täielikult sinu kontrolli all." }
+    },
+    {
+      "@type": "Question",
+      "name": "Kas leht ja kõik ligipääsud jäävad minu omaks?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Jah, absoluutselt. Domeen, majutus ja kõik ligipääsud on sinu nimel registreeritud — see on sinu vara. Pärast valmimist saad ise hallata, muuta ja vajadusel teisele arendajale edasi anda." }
+    },
+    {
+      "@type": "Question",
+      "name": "Kas sobib ka siis, kui mul pole veel logo ega fotosid?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Räägime läbi. Logo saab teha lihtsalt tekstina ja fotodeks saab kasutada tasuta stock-pilte. Sisu täiuslikkus enne algust pole tingimus — pigem alustame ja täiendame vajadusel." }
     }
   ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TX8SGN01HX"></script>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/cormorant-garamond-n300.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/dm-sans-n300.woff2" crossorigin>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-TX8SGN01HX');
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+window.addEventListener('load',function(){
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5PX8WGG4');
+});
 </script>
 <style>
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300 400;font-display:optional;src:url('/fonts/cormorant-garamond-i300.woff2') format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300 400 600;font-display:optional;src:url('/fonts/cormorant-garamond-n300.woff2') format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:300 400 500;font-display:optional;src:url('/fonts/dm-sans-n300.woff2') format('woff2')}
   :root { --blue:#a2d1ec; --peach:#ffeee9; --dark:#2c2c2c; --mid:#6b6b6b; --light:#f9f6f4; --white:#ffffff; --blue-dark:#7bb8d8; }
   * { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior:smooth; }
@@ -215,6 +232,14 @@
       <div class="stat-label">Järeltugi — parandused ja küsimused tasuta</div>
     </div>
   </div>
+</section>
+
+<section class="section">
+  <span class="section-tag">Mis on kodulehe loomine?</span>
+  <h2>Koduleht nullist ehk <em>professionaalne algus</em></h2>
+  <p style="font-size:0.95rem;font-weight:300;line-height:1.8;color:var(--mid);max-width:640px;margin-bottom:20px;">Kodulehe loomine nullist tähendab, et ehitad kodulehe algusest peale — ilma vananenud mallide, odavate veebileheehitajate ega AI generaatoriteta. Tulemuseks on leht, mis on sinu ettevõtte nägu ja mida saad ise edasi hallata.</p>
+  <p style="font-size:0.95rem;font-weight:300;line-height:1.8;color:var(--mid);max-width:640px;margin-bottom:20px;">Hea koduleht pole ainult ilus — see on kiire, mobiilisõbralik, turvaline ja leitav Google'ist. Kõik need asjad on omavahel seotud: aeglane leht tähendab vähem külastajaid, ebaselge sõnum tähendab vähem päringuid ja halb mobiilivaade tähendab kadunud kliente.</p>
+  <p style="font-size:0.95rem;font-weight:300;line-height:1.8;color:var(--mid);max-width:640px;">Ehitan kodulehe käsitsi — nii et kõik töötab korralikult ja saad ise edasi hallata. Ei kasuta malle ega automaatgeneraatoreid, sest iga ettevõte on erinev ja koduleht peaks seda peegeldama. 7 päeva pärast on sul töötav, professionaalne leht — ilma peidetud tasude ja igakuiste makseteta.</p>
 </section>
 
 <section class="section light">
@@ -360,6 +385,18 @@
     <div class="faq-item">
       <button class="faq-question">Kas 400€ on kõik või tuleb juurde maksta?</button>
       <div class="faq-answer"><p>400€ on arenduse hind. Lisaks maksad domeeni (~12€/a) ja majutuse (~5–10€/kuus) ise otse teenusepakkujale — see on sinu oma vara, mitte minu kaudu. Peidetud tasusid ei ole.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Miks ei tasu kasutada Wix-i, Squarespace-i ega AI veebileheehitajat?</button>
+      <div class="faq-answer"><p>Need tööriistad sobivad kiireks katsetamiseks, aga neil on olulised piirangud: leht on aeglasem, SEO on keerulisem seadistada, kujundus on piiratud mallide poolt ja sa oled igavesti nende platvormi külge lukustatud. WordPressil nullist ehitatud leht on kiirem, paremini leitav ja täielikult sinu kontrolli all.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Kas leht ja kõik ligipääsud jäävad minu omaks?</button>
+      <div class="faq-answer"><p>Jah, absoluutselt. Domeen, majutus ja kõik ligipääsud on sinu nimel registreeritud — see on sinu vara, mitte minu kaudu hallatud. Pärast valmimist saad ise hallata, muuta ja vajadusel teisele arendajale edasi anda. Ma ei lukusta sind enda külge.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Kas sobib ka siis, kui mul pole veel logo ega fotosid?</button>
+      <div class="faq-answer"><p>Räägime läbi. Logo saab teha lihtsalt tekstina (mis töötab suurepäraselt) ja fotodeks saab kasutada tasuta stock-pilte. Tekstid pead ise kirjutama, aga abistan struktuuriga. Sisu täiuslikkus enne algust pole tingimus — pigem alustame ja täiendame vajadusel.</p></div>
     </div>
   </div>
 </section>

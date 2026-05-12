@@ -66,21 +66,38 @@
       "@type": "Question",
       "name": "Kellele sobib kodulehe audit?",
       "acceptedAnswer": { "@type": "Answer", "text": "Igaühele, kellel on koduleht olemas aga Google ei too piisavalt külastajaid, leht tundub aegunud või sa lihtsalt ei tea, kas kõik on korras." }
+    },
+    {
+      "@type": "Question",
+      "name": "Mis vahe on kodulehe auditi ja SEO auditi vahel?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Kodulehe audit on laiem — vaatan kogu lehe funktsionaalsust, mitte ainult SEO-d. Minu audit hõlmab mõlemat: tehniline pool, sisu selgus, kiirus, mobiilivaade ja SEO koos ühes raportis." }
+    },
+    {
+      "@type": "Question",
+      "name": "Kas saan auditi tulemusi ise kasutada või pean tellima ka parandused?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Raport on kirjutatud nii, et saaksid ise otsustada. Paljud asjad saad ise parandada. Tehnilisteks parandusteks olen valmis appi tulema, aga see on eraldi tellimus ja kohustust ei ole." }
+    },
+    {
+      "@type": "Question",
+      "name": "Kas kodulehe auditit tuleb teha igal aastal?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Igaaastane audit pole kohustus, aga soovitan lasta audit teha siis, kui koduleht pole 2+ aasta jooksul põhjalikult üle vaadatud, kui tulemused on halvenenud, või pärast suurt uuendust. Kord 2–3 aastas on mõistlik." }
     }
   ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TX8SGN01HX"></script>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/cormorant-garamond-n300.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/dm-sans-n300.woff2" crossorigin>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-TX8SGN01HX');
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+window.addEventListener('load',function(){
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5PX8WGG4');
+});
 </script>
 <style>
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300 400;font-display:optional;src:url('/fonts/cormorant-garamond-i300.woff2') format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300 400 600;font-display:optional;src:url('/fonts/cormorant-garamond-n300.woff2') format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:300 400 500;font-display:optional;src:url('/fonts/dm-sans-n300.woff2') format('woff2')}
   :root { --blue:#a2d1ec; --peach:#ffeee9; --dark:#2c2c2c; --mid:#6b6b6b; --light:#f9f6f4; --white:#ffffff; --blue-dark:#7bb8d8; }
   * { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior:smooth; }
@@ -212,6 +229,14 @@
   </div>
 </section>
 
+<section class="section">
+  <span class="section-tag">Mis on kodulehe audit?</span>
+  <h2>Kodulehe audit ehk <em>lehe põhjalik läbivaatus</em></h2>
+  <p style="font-size:0.95rem;font-weight:300;line-height:1.8;color:var(--mid);max-width:640px;margin-bottom:20px;">Kodulehe audit on süstemaatiline läbivaatus, mis näitab, miks su koduleht ei too soovitud tulemusi. See pole kiire pilk — vaid põhjalik analüüs, kus vaatan su lehe läbi nii nagu seda näeb Google kui ka päris inimene, kes sind otsib.</p>
+  <p style="font-size:0.95rem;font-weight:300;line-height:1.8;color:var(--mid);max-width:640px;margin-bottom:20px;">Paljud kodulehed on välimuselt ilusad, aga neis on asjad, mis kliente eemale peletavad — leht on aeglane, sõnum on ebaselge, mobiilivaade on katki või Google lihtsalt ei leia seda üles. Kodulehe audit toob need probleemid päevavalgele enne, kui sa raiskad rohkem raha reklaami.</p>
+  <p style="font-size:0.95rem;font-weight:300;line-height:1.8;color:var(--mid);max-width:640px;">Tulemuseks on kirjalik raport konkreetsete soovitustega — mitte keeruline tehniline dokument, vaid selge ülevaade sellest, mida tasub muuta ja miks. Sa saad teada täpselt, mida esimesena parandada, et leht hakkaks töötama nii nagu peab.</p>
+</section>
+
 <section class="section light">
   <span class="section-tag">See audit on sulle, kui</span>
   <h2>Kas see kõlab <em>tuttavalt?</em></h2>
@@ -338,6 +363,18 @@
     <div class="faq-item">
       <button class="faq-question">Kellele sobib kodulehe audit?</button>
       <div class="faq-answer"><p>Igaühele, kellel on koduleht olemas aga Google ei too piisavalt külastajaid, leht tundub aegunud või sa lihtsalt ei tea, kas kõik on korras. Auditi järel tead täpselt, mida parandada — isegi kui otsustaksid seda ise teha.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Mis vahe on kodulehe auditi ja SEO auditi vahel?</button>
+      <div class="faq-answer"><p>Kodulehe audit on laiem — vaatan kogu lehe funktsionaalsust, mitte ainult SEO-d. SEO audit keskendub peamiselt otsingumootorite optimeerimisele. Minu audit hõlmab mõlemat: tehniline pool, sisu selgus, kiirus, mobiilivaade ja SEO koos ühes raportis. Ei pea kahte eraldi auditit tellima.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Kas saan auditi tulemusi ise kasutada või pean tellima ka parandused?</button>
+      <div class="faq-answer"><p>Raport on kirjutatud nii, et saaksid ise otsustada. Paljud asjad — tekstid, meta kirjeldused, CTA nupud — saad ise parandada. Tehnilisteks parandusteks olen valmis appi tulema, aga see on eraldi tellimus ja kohustust ei ole. Raport on sinu oma, mis iganes sa sellega edasi teed.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Kas kodulehe auditit tuleb teha igal aastal?</button>
+      <div class="faq-answer"><p>Igaaastane audit pole kohustus, aga soovitan lasta audit teha siis, kui koduleht pole 2+ aasta jooksul põhjalikult üle vaadatud, kui tulemused on halvenenud, või pärast suurt uuendust. Kord 2–3 aastas on mõistlik — veeb muutub pidevalt ja mis täna töötab, ei pruugi aasta pärast töötada.</p></div>
     </div>
   </div>
 </section>

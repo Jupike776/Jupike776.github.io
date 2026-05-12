@@ -72,21 +72,38 @@
       "@type": "Question",
       "name": "Mis juhtub, kui ülesanne võtab rohkem aega?",
       "acceptedAnswer": { "@type": "Answer", "text": "Ütlen ausalt ette, kui näen et 30–60 minutit ei piisa. Sa saad otsustada, kas jätkata või mitte. Ei lase kellelgi üllatusarvet saada." }
+    },
+    {
+      "@type": "Question",
+      "name": "Mis vahe on äriassistendil ja virtuaalassistendil?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sisuliselt sama asi — mõlemad töötavad kaugelt ja aitavad ettevõtjaid igapäevaste ülesannetega. Minu puhul on fookus digitaalsetel äriülesannetel: koduleht, turundus, meiliturundus, webinar." }
+    },
+    {
+      "@type": "Question",
+      "name": "Kas saan kasutada ka regulaarselt, mitte ainult hädaolukorras?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Jah, kindlasti. Paljud kliendid broneerivad aja regulaarselt — näiteks kord nädalas uudiskirja jaoks või kord kuus kodulehe uuenduste jaoks." }
+    },
+    {
+      "@type": "Question",
+      "name": "Kas abi saab ka nädalavahetusel?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Enamasti jah, aga see sõltub mu graafikust. Broneeri aeg läbi kalendri — seal näed kohe vabad ajad. Kui ühtegi sobivat aega pole, kirjuta mulle otse ja leiame lahenduse." }
     }
   ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TX8SGN01HX"></script>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/cormorant-garamond-n300.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/dm-sans-n300.woff2" crossorigin>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-TX8SGN01HX');
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+window.addEventListener('load',function(){
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5PX8WGG4');
+});
 </script>
 <style>
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300 400;font-display:optional;src:url('/fonts/cormorant-garamond-i300.woff2') format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300 400 600;font-display:optional;src:url('/fonts/cormorant-garamond-n300.woff2') format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:300 400 500;font-display:optional;src:url('/fonts/dm-sans-n300.woff2') format('woff2')}
   :root { --blue:#a2d1ec; --peach:#ffeee9; --dark:#2c2c2c; --mid:#6b6b6b; --light:#f9f6f4; --white:#ffffff; --blue-dark:#7bb8d8; }
   * { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior:smooth; }
@@ -226,9 +243,11 @@
 </section>
 
 <section class="section light">
-  <span class="section-tag">Mis see on?</span>
-  <h2>Ei mingit ootamist —<br><em>teeme ära täna</em></h2>
-  <p style="font-size:0.95rem;font-weight:300;line-height:1.8;color:var(--mid);max-width:600px;margin-bottom:0;">Ei mingit pikaajalist lepingut, ei ootamist. Töötan ainult onlines, kiiresti ja saab tehtud.</p>
+  <span class="section-tag">Mis on äriassistendi kiirabi?</span>
+  <h2>Virtuaalassistent <em>paindlikult ja kiiresti</em></h2>
+  <p style="font-size:0.95rem;font-weight:300;line-height:1.8;color:var(--mid);max-width:640px;margin-bottom:20px;">Äriassistendi kiirabi on virtuaalassistendi teenus, mis on mõeldud konkreetseteks ühekordsetes ülesanneteks — ilma pikaajalise lepinguta, ilma ootamiseta. Broneeri aeg, kirjelda ülesanne, ja see saab lahendatud samal päeval.</p>
+  <p style="font-size:0.95rem;font-weight:300;line-height:1.8;color:var(--mid);max-width:640px;margin-bottom:20px;">Virtuaalassistent ehk äriassistent on inimene, kes aitab sul ettevõttega seotud ülesandeid lahendada kaugelt — telefoni teel, e-kirja teel või ekraanijagamise kaudu. Tavalisest kontorassistendist erineb see paindlikkuse poolest: saad tuge täpselt nii palju ja siis, kui sul seda vaja on.</p>
+  <p style="font-size:0.95rem;font-weight:300;line-height:1.8;color:var(--mid);max-width:640px;">Minu fookus on digitaalsed ülesanded — koduleht, uudiskiri, meiliturundus, webinari tehniline tugi. Ei mingit pikaajalist lepingut, ei ootamist. Töötan kiiresti ja saab tehtud.</p>
 </section>
 
 <section class="section" id="mis-teen">
@@ -349,6 +368,18 @@
     <div class="faq-item">
       <button class="faq-question">Mis juhtub, kui ülesanne võtab rohkem aega?</button>
       <div class="faq-answer"><p>Ütlen ausalt ette, kui näen et 30–60 minutit ei piisa. Sa saad otsustada, kas jätkata või mitte. Ei lase kellelgi üllatusarvet saada.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Mis vahe on äriassistendil ja virtuaalassistendil?</button>
+      <div class="faq-answer"><p>Sisuliselt sama asi — mõlemad töötavad kaugelt ja aitavad ettevõtjaid igapäevaste ülesannetega. Äriassistent rõhutab ärilist fookust: ülesanded on seotud sinu ettevõtte toimimisega — koduleht, turundus, meiliturundus, webinar. Virtuaalassistent on laiem mõiste, mis hõlmab ka isiklikku assistenti. Minu puhul on fookus digitaalsetel äriülesannetel.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Kas saan kasutada ka regulaarselt, mitte ainult hädaolukorras?</button>
+      <div class="faq-answer"><p>Jah, kindlasti. Paljud kliendid broneerivad aja regulaarselt — näiteks kord nädalas uudiskirja jaoks või kord kuus kodulehe uuenduste jaoks. Selline regulaarne koostöö toimib hästi ja hoiab sinu ajakava vabana muude asjade jaoks.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Kas abi saab ka nädalavahetusel?</button>
+      <div class="faq-answer"><p>Enamasti jah, aga see sõltub mu graafikust. Broneeri aeg läbi kalendri — seal näed kohe vabad ajad. Kui ühtegi sobivat aega pole, kirjuta mulle otse ja leiame lahenduse.</p></div>
     </div>
   </div>
 </section>
