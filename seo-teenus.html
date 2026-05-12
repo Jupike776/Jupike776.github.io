@@ -66,21 +66,38 @@
       "@type": "Question",
       "name": "Kas mul on enne vaja midagi ette valmistada?",
       "acceptedAnswer": { "@type": "Answer", "text": "Ei pea. Vajan ligipääsu sinu kodulehele ja domeenile — see on kõik. Ülejäänud asjad saan ise seadistada." }
+    },
+    {
+      "@type": "Question",
+      "name": "Mis vahe on SEO seadistamisel ja igakuisel SEO-l?",
+      "acceptedAnswer": { "@type": "Answer", "text": "SEO seadistamine on ühekordne töö — see loob õige aluse. Igakuine SEO on jooksev töö. Paljud väikeettevõtjad saavad ainult seadistamisest piisavalt, eriti kui nende valdkonnas pole väga tihe konkurents." }
+    },
+    {
+      "@type": "Question",
+      "name": "Kellele sobib SEO seadistamine?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Eelkõige mikroettevõtjatele ja teenusepakkujatele Eestis, kellel on juba koduleht olemas, aga Google ei leia neid hästi üles." }
+    },
+    {
+      "@type": "Question",
+      "name": "Kas SEO seadistamine toimib ka WordPress kodulehel?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Jah — WordPress on SEO jaoks väga hea platvorm. Seadistan vajalikud pluginad, konfigureeerin Yoast SEO või Rank Math, ühendame Google tööriistad ja optimeerin lehestruktuur." }
     }
   ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TX8SGN01HX"></script>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/cormorant-garamond-n300.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/dm-sans-n300.woff2" crossorigin>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-TX8SGN01HX');
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+window.addEventListener('load',function(){
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5PX8WGG4');
+});
 </script>
 <style>
+  @font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300 400;font-display:optional;src:url('/fonts/cormorant-garamond-i300.woff2') format('woff2')}
+  @font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300 400 600;font-display:optional;src:url('/fonts/cormorant-garamond-n300.woff2') format('woff2')}
+  @font-face{font-family:'DM Sans';font-style:normal;font-weight:300 400 500;font-display:optional;src:url('/fonts/dm-sans-n300.woff2') format('woff2')}
   :root { --blue:#a2d1ec; --peach:#ffeee9; --dark:#2c2c2c; --mid:#6b6b6b; --light:#f9f6f4; --white:#ffffff; --blue-dark:#7bb8d8; }
   * { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior:smooth; }
@@ -218,6 +235,14 @@
       <div class="stat-label">Kohustust jätkata pärast seadistamist</div>
     </div>
   </div>
+</section>
+
+<section class="section">
+  <span class="section-tag">SEO seadistamine lihtsas keeles</span>
+  <h2>Mis on <em>SEO seadistamine?</em></h2>
+  <p style="font-size:0.95rem;font-weight:300;line-height:1.9;color:var(--mid);max-width:680px;margin-bottom:28px;">SEO seadistamine (ingl <em>Search Engine Optimization</em>) on protsess, mille käigus muudetakse koduleht Google'ile arusaadavamaks ja kasutajale atraktiivsemaks. Eesmärk on lihtne: kui keegi otsib Google'ist sinu teenust, peaks sinu koduleht ilmuma otsingutulemuste hulka.</p>
+  <p style="font-size:0.95rem;font-weight:300;line-height:1.9;color:var(--mid);max-width:680px;margin-bottom:28px;">SEO seadistamine hõlmab tehnilist poolt (leht laadib kiiresti, Google saab sisu kätte), sisu poolt (pealkirjad, märksõnad, tekstid) ja tööriistade ühendamist (Google Analytics, Search Console). Kõik kolm peavad koos toimima.</p>
+  <p style="font-size:0.95rem;font-weight:300;line-height:1.9;color:var(--mid);max-width:680px;">Mina teen sinu eest ära kogu tehnilise SEO seadistamise — sina ei pea SEO-st midagi teadma.</p>
 </section>
 
 <section class="section light">
@@ -362,6 +387,18 @@
     <div class="faq-item">
       <button class="faq-question">Kas mul on enne vaja midagi ette valmistada?</button>
       <div class="faq-answer"><p>Ei pea. Vajan ligipääsu sinu kodulehele ja domeenile — see on kõik. Ülejäänud asjad saan ise seadistada. Kui ligipääsud on olemas, saan kohe alustada.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Mis vahe on SEO seadistamisel ja igakuisel SEO-l?</button>
+      <div class="faq-answer"><p>SEO seadistamine on ühekordne töö — see loob õige aluse. Igakuine SEO on jooksev töö (uued blogipostitused, linkide ehitamine, positsioonide jälgimine). Paljud väikeettevõtjad saavad ainult seadistamisest piisavalt — eriti kui nende valdkonnas pole väga tihe konkurents.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Kellele sobib SEO seadistamine?</button>
+      <div class="faq-answer"><p>Eelkõige mikroettevõtjatele ja teenusepakkujatele Eestis, kellel on juba koduleht olemas, aga Google ei leia neid hästi üles. Eriti kasulik siis, kui koduleht on tehtud WordPressis, Wixis või mõnel muul platvormil ja SEO-d pole kunagi seadistatud.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Kas SEO seadistamine toimib ka WordPress kodulehel?</button>
+      <div class="faq-answer"><p>Jah — WordPress on tegelikult SEO jaoks väga hea platvorm. Seadistan vajalikud pluginad, konfigureeerin Yoast SEO või Rank Math, ühendame Google tööriistad ja optimeerin lehestruktuur. WordPressi SEO seadistamine on üks levinuimaid teenuseid mida pakun.</p></div>
     </div>
   </div>
 </section>
