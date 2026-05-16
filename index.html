@@ -70,7 +70,7 @@ if(window.location.search){
 <meta name="twitter:title" content="Kodulehe loomine & SEO seadistamine mikroettevõtjatele | Signe Wilms">
 <meta name="twitter:description" content="Koduleht nullist 7 päevaga, SEO seadistamine ja kodulehe haldus mikroettevõtjatele — Signe Wilms. Hinnad alates 50€. Esimene vestlus tasuta!">
 <meta name="twitter:image" content="https://signewilms.ee/repository-open-graph-template.png">
-<link rel="preload" as="image" href="signe-hero.webp" fetchpriority="high">
+<link rel="preload" as="image" href="signe-hero.webp" imagesrcset="signe-hero-sm.webp 400w, signe-hero.webp 800w" imagesizes="(max-width:900px) 100vw, 50vw" fetchpriority="high">
 <link rel="preload" as="font" type="font/woff2" href="/fonts/cormorant-garamond-n300.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/dm-sans-n300.woff2" crossorigin>
 <!-- Google Tag Manager (deferred) -->
@@ -673,46 +673,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="mailto:signewilms@gmail.com">signewilms@gmail.com</a>
 </footer>
 
-<script>
-// Nupud - kontakt
-document.querySelector('.btn-primary').addEventListener('click', function() {
-  fbq('track', 'Contact', {content_name: 'Võta ühendust nupp'});
-});
-
-// Telefon ja email klikid
-document.querySelectorAll('.contact-item').forEach(function(el) {
-  el.addEventListener('click', function() {
-    var label = el.querySelector('.contact-item-label');
-    if (label) fbq('track', 'Contact', {content_name: label.textContent});
-  });
-});
-
-// Sektsioonide jälgimine - IntersectionObserver
-var sections = [
-  { id: 'meist', name: 'Minust' },
-  { id: 'teenused', name: 'Teenused' },
-  { id: 'hinnakiri', name: 'Hinnakiri' },
-  { id: 'arvamused', name: 'Arvamused' },
-  { id: 'kontakt', name: 'Kontakt' }
-];
-
-var fired = {};
-
-var observer = new IntersectionObserver(function(entries) {
-  entries.forEach(function(entry) {
-    if (entry.isIntersecting && !fired[entry.target.id]) {
-      fired[entry.target.id] = true;
-      fbq('trackCustom', 'SectionView', {section: entry.target.id});
-    }
-  });
-}, { threshold: 0.3 });
-
-sections.forEach(function(s) {
-  var el = document.getElementById(s.id);
-  if (el) observer.observe(el);
-});
-</script>
-<!-- Meta Pixel (lazy) -->
+<!-- Meta Pixel (deferred until first interaction) -->
 <script>
   !function(f,b,e,v,n,t,s){
     if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -722,10 +683,44 @@ sections.forEach(function(s) {
   }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
   fbq('init','1517080415512965');
   fbq('track','PageView');
-  window.addEventListener('load',function(){
-    var s=document.createElement('script');s.async=true;
-    s.src='https://connect.facebook.net/en_US/fbevents.js';
-    document.head.appendChild(s);
+
+  (function(){
+    var loaded=false;
+    function loadPixel(){
+      if(loaded)return;loaded=true;
+      var s=document.createElement('script');s.async=true;
+      s.src='https://connect.facebook.net/en_US/fbevents.js';
+      document.head.appendChild(s);
+    }
+    ['scroll','click','keydown','touchstart'].forEach(function(e){
+      window.addEventListener(e,loadPixel,{once:true,passive:true});
+    });
+    setTimeout(loadPixel,5000);
+  })();
+
+  document.querySelector('.btn-primary').addEventListener('click', function() {
+    fbq('track', 'Contact', {content_name: 'Võta ühendust nupp'});
+  });
+
+  document.querySelectorAll('.contact-item').forEach(function(el) {
+    el.addEventListener('click', function() {
+      var label = el.querySelector('.contact-item-label');
+      if (label) fbq('track', 'Contact', {content_name: label.textContent});
+    });
+  });
+
+  var fired={};
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting&&!fired[entry.target.id]){
+        fired[entry.target.id]=true;
+        fbq('trackCustom','SectionView',{section:entry.target.id});
+      }
+    });
+  },{threshold:0.3});
+  [{id:'meist'},{id:'teenused'},{id:'hinnakiri'},{id:'arvamused'},{id:'kontakt'}].forEach(function(s){
+    var el=document.getElementById(s.id);
+    if(el)observer.observe(el);
   });
 </script>
 </body>
