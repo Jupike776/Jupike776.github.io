@@ -119,7 +119,7 @@ function gtag(){dataLayer.push(arguments);}
   .hero { padding:140px 80px 80px; background:var(--light); display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
   .hero-tag { display:inline-block; background:var(--blue); color:var(--dark); font-size:0.72rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; padding:6px 14px; border-radius:20px; margin-bottom:24px; }
   .hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(2.2rem,4vw,3.6rem); font-weight:300; line-height:1.1; margin-bottom:20px; }
-  .hero h1 em { font-style:italic; color:var(--blue-dark); }
+  .hero h1 em { font-style:italic; color:#1f6b9c; }
   .hero-sub { font-size:1rem; font-weight:300; line-height:1.8; color:var(--mid); margin-bottom:36px; max-width:460px; }
   .hero-price { font-family:'Cormorant Garamond',serif; font-size:2.4rem; font-weight:300; color:var(--dark); margin-bottom:8px; }
   .hero-price span { font-size:0.9rem; font-family:'DM Sans',sans-serif; font-weight:300; color:var(--mid); }
@@ -137,10 +137,10 @@ function gtag(){dataLayer.push(arguments);}
   .section.peach { background:var(--peach); }
   .section-tag { display:inline-block; font-size:0.72rem; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:var(--dark); margin-bottom:14px; }
   .section h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3vw,2.6rem); font-weight:300; line-height:1.2; margin-bottom:40px; }
-  .section h2 em { font-style:italic; color:var(--blue-dark); }
+  .section h2 em { font-style:italic; color:#1f6b9c; }
   .bullet-list { list-style:none; display:flex; flex-direction:column; gap:12px; max-width:680px; }
   .bullet-list li { font-size:0.92rem; font-weight:300; line-height:1.75; color:var(--mid); padding-left:20px; position:relative; }
-  .bullet-list li::before { content:"→"; position:absolute; left:0; color:var(--blue-dark); font-weight:500; }
+  .bullet-list li::before { content:"→"; position:absolute; left:0; color:#1f6b9c; font-weight:500; }
   .what-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
   .what-item { background:white; border-radius:8px; padding:28px; border-left:3px solid var(--blue); }
   .what-item h3 { font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:600; margin-bottom:10px; }
@@ -160,24 +160,24 @@ function gtag(){dataLayer.push(arguments);}
   .step-body p { font-size:0.86rem; font-weight:300; line-height:1.75; color:var(--mid); }
   .step-body ul { list-style:none; margin-top:8px; display:flex; flex-direction:column; gap:6px; }
   .step-body ul li { font-size:0.84rem; font-weight:300; line-height:1.7; color:var(--mid); padding-left:16px; position:relative; }
-  .step-body ul li::before { content:"·"; position:absolute; left:0; font-weight:700; color:var(--blue-dark); }
+  .step-body ul li::before { content:"·"; position:absolute; left:0; font-weight:700; color:#1f6b9c; }
   .result-list { list-style:none; display:flex; flex-direction:column; gap:12px; max-width:600px; margin-bottom:32px; }
   .result-list li { font-size:0.92rem; font-weight:300; line-height:1.75; color:var(--mid); padding-left:20px; position:relative; }
-  .result-list li::before { content:"✓"; position:absolute; left:0; color:var(--blue-dark); font-weight:500; }
+  .result-list li::before { content:"✓"; position:absolute; left:0; color:#1f6b9c; font-weight:500; }
   .price-box { background:var(--light); border-radius:8px; padding:40px; max-width:560px; }
   .price-amount { font-family:'Cormorant Garamond',serif; font-size:3rem; font-weight:300; margin-bottom:6px; }
   .price-amount span { font-size:1rem; font-family:'DM Sans',sans-serif; font-weight:300; color:var(--mid); }
   .price-note { font-size:0.82rem; font-weight:300; color:var(--mid); margin-bottom:24px; }
   .price-includes { list-style:none; display:flex; flex-direction:column; gap:10px; margin-bottom:32px; }
   .price-includes li { font-size:0.86rem; font-weight:300; line-height:1.7; color:var(--mid); padding-left:18px; position:relative; }
-  .price-includes li::before { content:"✓"; position:absolute; left:0; color:var(--blue-dark); font-weight:500; }
+  .price-includes li::before { content:"✓"; position:absolute; left:0; color:#1f6b9c; font-weight:500; }
   .cta-section { text-align:center; padding:100px 80px; background:var(--dark); color:white; }
   .faq-section { padding:100px 80px; background:var(--light); }
   .faq-section h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3vw,2.6rem); font-weight:300; text-align:center; margin-bottom:48px; }
   .faq-list { max-width:760px; margin:0 auto; }
   .faq-item { border-bottom:1px solid rgba(162,209,236,0.35); }
   .faq-question { width:100%; background:none; border:none; text-align:left; padding:22px 0; font-family:'DM Sans',sans-serif; font-size:0.95rem; font-weight:500; color:var(--dark); cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:16px; }
-  .faq-question::after { content:'+'; font-size:1.4rem; font-weight:300; color:var(--blue-dark); flex-shrink:0; transition:transform 0.2s; }
+  .faq-question::after { content:'+'; font-size:1.4rem; font-weight:300; color:#1f6b9c; flex-shrink:0; transition:transform 0.2s; }
   .faq-item.open .faq-question::after { transform:rotate(45deg); }
   .faq-answer { max-height:0; overflow:hidden; transition:max-height 0.3s ease; }
   .faq-answer p { font-size:0.88rem; font-weight:300; line-height:1.8; color:var(--mid); padding-bottom:20px; }
@@ -217,7 +217,7 @@ function gtag(){dataLayer.push(arguments);}
     <li><a href="/#kontakt">Kontakt</a></li>
   </ul>
 </nav>
-
+<main>
 <section class="hero">
   <div>
     <span class="hero-tag">SEO seadistamine Eestis</span>
@@ -437,7 +437,7 @@ function gtag(){dataLayer.push(arguments);}
   <p>SEO seadistamine 500€, ühekordne makse. Esimene vestlus on tasuta ja kohustuseta.</p>
   <a href="/#kontakt" class="btn-primary">Telli SEO seadistamine →</a>
 </section>
-
+</main>
 <footer>
   <p>© 2026 Signe Wilms. Kõik õigused kaitstud.</p>
   <a href="mailto:signewilms@gmail.com">signewilms@gmail.com</a>
