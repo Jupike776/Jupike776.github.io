@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kodulehe audit Eestis – SEO audit väikeettevõtjale | Signe Wilms</title>
-<meta name="description" content="Kodulehe audit Eestis: selgub miks su leht kliente ei too. Kirjalik raport SEO, kiiruse, mobiilivaate ja sisu kohta. 220€, 4–5 tööpäevaga.">
+<title>Kodulehe audit Eestis – miks su leht kliente ei too? | Signe Wilms</title>
+<meta name="description" content="Kodulehe audit väikeettevõtjale: kirjalik raport + osad parandused tehakse kohe ära. Selgub miks leht ei müü – SEO, kiirus, mobiilivaade. 220€ · 4–5 tööpäeva.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://signewilms.ee/kodulehe-audit.html">
 <link rel="icon" type="image/svg+xml" href="Signe-Wilms-logo.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-<meta property="og:title" content="Kodulehe audit Eestis – SEO audit väikeettevõtjale | Signe Wilms">
-<meta property="og:description" content="Kodulehe audit Eestis: selgub miks su leht kliente ei too. Kirjalik raport SEO, kiiruse ja mobiilivaate kohta. 220€.">
+<meta property="og:title" content="Kodulehe audit Eestis – miks su leht kliente ei too? | Signe Wilms">
+<meta property="og:description" content="Kodulehe audit väikeettevõtjale: kirjalik raport + osad parandused kohe ära. Selgub miks leht ei müü. 220€ · 4–5 tööpäeva.">
 <meta property="og:url" content="https://signewilms.ee/kodulehe-audit.html">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="et_EE">
@@ -418,5 +418,31 @@ function gtag(){dataLayer.push(arguments);}
   <p>© 2026 Signe Wilms. Kõik õigused kaitstud.</p>
   <a href="mailto:signewilms@gmail.com">signewilms@gmail.com</a>
 </footer>
+
+<!-- Meta Pixel (deferred until first interaction) -->
+<script>
+  !function(f,b,e,v,n,t,s){
+    if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];
+  }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','1517080415512965');
+  fbq('track','PageView');
+
+  (function(){
+    var loaded=false;
+    function loadPixel(){
+      if(loaded)return;loaded=true;
+      var s=document.createElement('script');s.async=true;
+      s.src='https://connect.facebook.net/en_US/fbevents.js';
+      document.head.appendChild(s);
+    }
+    ['scroll','click','keydown','touchstart'].forEach(function(e){
+      window.addEventListener(e,loadPixel,{once:true,passive:true});
+    });
+    setTimeout(loadPixel,5000);
+  })();
+</script>
 </body>
 </html>

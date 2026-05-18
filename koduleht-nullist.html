@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Koduleht nullist 7 päevaga – 400€ | Signe Wilms</title>
-<meta name="description" content="Otsin kodulehe teenust? Ehitan professionaalse kodulehe nullist 7 päevaga – 400€, ühekordne makse. Mobiilisõbralik, SSL, 30 päeva järeltugi.">
+<title>Koduleht nullist Eestis – professionaalne koduleht 7 päevaga | Signe Wilms</title>
+<meta name="description" content="Koduleht nullist Eestis: professionaalne leht 7 päevaga, 400€ ühekordne makse. Mobiilisõbralik, SSL ja 30 päeva järeltugi kaasa. Ei mingit kuutasu.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://signewilms.ee/koduleht-nullist.html">
 <link rel="icon" type="image/svg+xml" href="Signe-Wilms-logo.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-<meta property="og:title" content="Koduleht nullist 7 päevaga – 400€ | Signe Wilms">
-<meta property="og:description" content="Otsin kodulehe teenust? Ehitan professionaalse kodulehe nullist 7 päevaga – 400€, ühekordne makse. Mobiilisõbralik, SSL, 30 päeva järeltugi.">
+<meta property="og:title" content="Koduleht nullist Eestis – professionaalne koduleht 7 päevaga | Signe Wilms">
+<meta property="og:description" content="Koduleht nullist Eestis: professionaalne leht 7 päevaga, 400€ ühekordne makse. Mobiilisõbralik, SSL ja 30 päeva järeltugi kaasa.">
 <meta property="og:url" content="https://signewilms.ee/koduleht-nullist.html">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="et_EE">
@@ -440,5 +440,31 @@ function gtag(){dataLayer.push(arguments);}
   <p>© 2026 Signe Wilms. Kõik õigused kaitstud.</p>
   <a href="mailto:signewilms@gmail.com">signewilms@gmail.com</a>
 </footer>
+
+<!-- Meta Pixel (deferred until first interaction) -->
+<script>
+  !function(f,b,e,v,n,t,s){
+    if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];
+  }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','1517080415512965');
+  fbq('track','PageView');
+
+  (function(){
+    var loaded=false;
+    function loadPixel(){
+      if(loaded)return;loaded=true;
+      var s=document.createElement('script');s.async=true;
+      s.src='https://connect.facebook.net/en_US/fbevents.js';
+      document.head.appendChild(s);
+    }
+    ['scroll','click','keydown','touchstart'].forEach(function(e){
+      window.addEventListener(e,loadPixel,{once:true,passive:true});
+    });
+    setTimeout(loadPixel,5000);
+  })();
+</script>
 </body>
 </html>

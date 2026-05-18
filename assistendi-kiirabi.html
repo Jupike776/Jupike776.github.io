@@ -419,5 +419,31 @@ function gtag(){dataLayer.push(arguments);}
   <p>© 2026 Signe Wilms. Kõik õigused kaitstud.</p>
   <a href="mailto:signewilms@gmail.com">signewilms@gmail.com</a>
 </footer>
+
+<!-- Meta Pixel (deferred until first interaction) -->
+<script>
+  !function(f,b,e,v,n,t,s){
+    if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];
+  }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','1517080415512965');
+  fbq('track','PageView');
+
+  (function(){
+    var loaded=false;
+    function loadPixel(){
+      if(loaded)return;loaded=true;
+      var s=document.createElement('script');s.async=true;
+      s.src='https://connect.facebook.net/en_US/fbevents.js';
+      document.head.appendChild(s);
+    }
+    ['scroll','click','keydown','touchstart'].forEach(function(e){
+      window.addEventListener(e,loadPixel,{once:true,passive:true});
+    });
+    setTimeout(loadPixel,5000);
+  })();
+</script>
 </body>
 </html>
