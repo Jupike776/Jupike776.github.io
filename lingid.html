@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signe Wilms</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: #fdf8f4;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 16px 60px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 480px;
+    }
+
+    .profile {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .profile img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #c8a96e;
+      margin-bottom: 14px;
+    }
+
+    .profile h1 {
+      font-size: 1.4rem;
+      color: #2b2b2b;
+      font-weight: normal;
+      letter-spacing: 0.02em;
+    }
+
+    .profile p {
+      font-size: 0.9rem;
+      color: #7a6a58;
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .link-btn {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #ffffff;
+      border: 1.5px solid #e8ddd2;
+      border-radius: 14px;
+      padding: 16px 20px;
+      text-decoration: none;
+      color: #2b2b2b;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .link-btn:hover {
+      background: #c8a96e;
+      color: #ffffff;
+      border-color: #c8a96e;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(200,169,110,0.25);
+    }
+
+    .link-btn .icon {
+      font-size: 1.3rem;
+      width: 28px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .link-btn .text {
+      flex: 1;
+    }
+
+    .link-btn .text strong {
+      display: block;
+      font-weight: 600;
+    }
+
+    .link-btn .text span {
+      font-size: 0.8rem;
+      color: #9a8a78;
+      margin-top: 2px;
+      display: block;
+    }
+
+    .link-btn:hover .text span {
+      color: rgba(255,255,255,0.75);
+    }
+
+    .featured {
+      background: #2b2b2b;
+      border-color: #2b2b2b;
+      color: #ffffff;
+    }
+
+    .featured .text span {
+      color: #c8a96e;
+    }
+
+    .featured:hover {
+      background: #c8a96e;
+      border-color: #c8a96e;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 36px;
+      font-size: 0.78rem;
+      color: #b0a090;
+    }
+
+    .footer a {
+      color: #c8a96e;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="profile">
+      <img src="https://signewilms.ee/signe-hero.webp" alt="Signe Wilms" />
+      <h1>Signe Wilms</h1>
+      <p>SEO · GEO · Koduleht · Audit<br>Töötan veebis üle Eesti</p>
+    </div>
+
+    <div class="links">
+
+      <a href="https://zcal.co/i/GhMRsgoU" class="link-btn featured">
+        <span class="icon">📞</span>
+        <div class="text">
+          <strong>Broneeri tasuta kõne</strong>
+          <span>Esimene vestlus on alati tasuta</span>
+        </div>
+      </a>
+
+      <a href="https://signewilms.ee" class="link-btn">
+        <span class="icon">🌐</span>
+        <div class="text">
+          <strong>Koduleht</strong>
+          <span>signewilms.ee</span>
+        </div>
+      </a>
+
+      <a href="https://signewilms.ee/blogi/" class="link-btn">
+        <span class="icon">✍️</span>
+        <div class="text">
+          <strong>Blogi</strong>
+          <span>Mõtted kodulehe, SEO ja ettevõtluse teemal</span>
+        </div>
+      </a>
+
+      <a href="https://preview.mailerlite.io/forms/852898/185991733923809154/share" class="link-btn">
+        <span class="icon">📬</span>
+        <div class="text">
+          <strong>Telli nädalakiri</strong>
+          <span>Praktilised nõuanded kord nädalas</span>
+        </div>
+      </a>
+
+      <a href="https://www.instagram.com/signewilms/" class="link-btn">
+        <span class="icon">📸</span>
+        <div class="text">
+          <strong>Instagram</strong>
+          <span>@signewilms</span>
+        </div>
+      </a>
+
+      <a href="https://www.linkedin.com/in/signewilms/" class="link-btn">
+        <span class="icon">💼</span>
+        <div class="text">
+          <strong>LinkedIn</strong>
+          <span>linkedin.com/in/signewilms</span>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="footer">
+      <p>© 2026 Signe Wilms &nbsp;·&nbsp; <a href="mailto:signewilms@gmail.com">signewilms@gmail.com</a></p>
+    </div>
+
+  </div>
+</body>
+</html>
