@@ -24,38 +24,138 @@ if(window.location.search){
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Signe Wilms",
-  "description": "Kodulehe loomine, SEO ja GEO seadistamine mikroettevõtjatele Eestis. Koduleht valmis 7 päevaga. Leitav nii Google'is kui AI otsingus.",
-  "url": "https://signewilms.ee",
-  "telephone": "+37258183799",
-  "email": "signewilms@gmail.com",
-  "image": "https://signewilms.ee/signe-hero.webp",
-  "priceRange": "50€–500€",
-  "openingHours": "Mo-Su 09:00-20:00",
-  "areaServed": {
-    "@type": "Country",
-    "name": "Estonia"
-  },
-  "knowsLanguage": ["et", "ru", "de", "en"],
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "EE"
-  },
-  "sameAs": [
-    "https://www.facebook.com/SigneWilmsEE",
-    "https://www.instagram.com/signewilms/",
-    "https://www.linkedin.com/in/signewilms/"
-  ],
-  "serviceType": [
-    "Kodulehe loomine",
-    "SEO seadistamine",
-    "GEO seadistamine",
-    "Tehniline SEO",
-    "AI otsingu optimeerimine",
-    "Kodulehe haldus",
-    "Kodulehe audit",
-    "Äriassistent"
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://signewilms.ee/#business",
+      "name": "Signe Wilms",
+      "alternateName": "Signe Wilms OÜ",
+      "description": "Kodulehe loomine, SEO ja GEO seadistamine mikroettevõtjatele Eestis. Koduleht valmis 7 päevaga. Leitav nii Google'is kui AI otsingus.",
+      "url": "https://signewilms.ee",
+      "telephone": "+37258183799",
+      "email": "signewilms@gmail.com",
+      "image": "https://signewilms.ee/signe-hero.webp",
+      "logo": "https://signewilms.ee/Signe-Wilms-logo.svg",
+      "priceRange": "50€–500€",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "EE"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Estonia"
+      },
+      "knowsLanguage": ["et", "ru", "de", "en"],
+      "availableLanguage": ["et", "ru", "de", "en"],
+      "founder": {
+        "@id": "https://signewilms.ee/#person"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "09:00",
+          "closes": "20:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/SigneWilmsEE",
+        "https://www.instagram.com/signewilms/",
+        "https://www.linkedin.com/in/signewilms/"
+      ],
+      "serviceType": [
+        "Kodulehe loomine",
+        "SEO seadistamine",
+        "GEO seadistamine",
+        "Tehniline SEO",
+        "AI otsingu optimeerimine",
+        "Kodulehe haldus",
+        "Kodulehe audit",
+        "Äriassistent"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Teenused",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "price": "400",
+            "priceCurrency": "EUR",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Koduleht nullist",
+              "description": "Koduleht valmis 7 päevaga. WordPress või koodiga, mobiilisõbralik, SSL, 30 päeva järeltugi.",
+              "url": "https://signewilms.ee/koduleht-nullist.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "price": "500",
+            "priceCurrency": "EUR",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "SEO ja GEO seadistamine",
+              "description": "Täielik SEO pakett: Google Analytics 4, Search Console, structured data, otsingusõnade analüüs, PageSpeed parandamine.",
+              "url": "https://signewilms.ee/seo-teenus.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "price": "220",
+            "priceCurrency": "EUR",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Kodulehe audit",
+              "description": "Põhjalik kirjalik raport sinu veebilehe seisukorrast koos parandusettepanekutega.",
+              "url": "https://signewilms.ee/kodulehe-audit.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "price": "50",
+            "priceCurrency": "EUR",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "50",
+              "priceCurrency": "EUR",
+              "unitCode": "HUR"
+            },
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Assistendi kiirabi",
+              "description": "Kiire abi samal päeval. Minimaalselt 30 minutit. Ei mingit lepingut.",
+              "url": "https://signewilms.ee/assistendi-kiirabi.html"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://signewilms.ee/#person",
+      "name": "Signe Wilms",
+      "url": "https://signewilms.ee/minust.html",
+      "image": "https://signewilms.ee/signe-about-main.webp",
+      "jobTitle": "Kodulehe looja ja SEO spetsialist",
+      "description": "Eesti mikroettevõtjate kodulehe looja ja SEO spetsialist. Spetsialiseerunud 45–65-aastastele naistele.",
+      "worksFor": {
+        "@id": "https://signewilms.ee/#business"
+      },
+      "knowsLanguage": ["et", "ru", "de", "en"],
+      "sameAs": [
+        "https://www.linkedin.com/in/signewilms/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://signewilms.ee/#website",
+      "url": "https://signewilms.ee",
+      "name": "Signe Wilms",
+      "inLanguage": "et-EE",
+      "publisher": {
+        "@id": "https://signewilms.ee/#business"
+      }
+    }
   ]
 }
 </script>
