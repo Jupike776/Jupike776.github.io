@@ -23,25 +23,84 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
+  "@id": "https://signewilms.ee/seo-teenus.html#service",
   "name": "Kodulehe SEO ja GEO seadistamine",
   "serviceType": "SEO ja GEO seadistamine",
-  "description": "Kodulehe SEO ja GEO seadistamine lihtsas keeles. Google ja AI otsingumootori leiab sinu lehe üles, vajalikud tööriistad ühendatud, probleemid parandatud. Kirjalik raport tehtud tööde kohta.",
+  "category": "Digital Marketing Service",
+  "description": "Kodulehe SEO ja GEO seadistamine lihtsas keeles. Google ja AI otsingumootori (ChatGPT, Perplexity, Google AI Overviews) leiavad sinu lehe üles. Vajalikud tööriistad ühendatud, probleemid parandatud. Kirjalik raport tehtud tööde kohta.",
   "areaServed": { "@type": "Country", "name": "Estonia" },
+  "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": "Mikroettevõtjad Eestis"
+  },
   "provider": {
-    "@type": "LocalBusiness",
+    "@type": "ProfessionalService",
+    "@id": "https://signewilms.ee/#business",
     "name": "Signe Wilms",
+    "alternateName": "Signe Wilms OÜ",
     "url": "https://signewilms.ee",
     "telephone": "+37258183799",
     "email": "signewilms@gmail.com",
-    "address": { "@type": "PostalAddress", "addressCountry": "EE" },
-    "areaServed": { "@type": "Country", "name": "Estonia" }
+    "image": "https://signewilms.ee/signe-hero.webp",
+    "logo": "https://signewilms.ee/Signe-Wilms-logo.svg",
+    "priceRange": "50€–500€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Hällimäe tee 10",
+      "addressLocality": "Tamme küla, Elva vald",
+      "addressRegion": "Tartumaa",
+      "postalCode": "61114",
+      "addressCountry": "EE"
+    },
+    "areaServed": { "@type": "Country", "name": "Estonia" },
+    "knowsLanguage": ["et", "ru", "de", "en"],
+    "sameAs": [
+      "https://www.facebook.com/SigneWilmsEE",
+      "https://www.instagram.com/signewilms/",
+      "https://www.linkedin.com/in/signewilms/"
+    ]
   },
   "offers": {
     "@type": "Offer",
     "price": "500",
     "priceCurrency": "EUR",
     "availability": "https://schema.org/InStock",
-    "description": "Ühekordne SEO ja GEO seadistamine koos kirjaliku raportiga"
+    "validFrom": "2026-01-01",
+    "description": "Ühekordne SEO ja GEO seadistamine koos kirjaliku raportiga. Sisaldab Google Analytics 4, Search Console, structured data, otsingusõnade analüüsi, PageSpeed parandamist."
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "SEO ja GEO seadistamise teenused",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Tehniline SEO seadistamine"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "GEO optimeerimine AI-otsingu jaoks"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Google Analytics ja Search Console seadistamine"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Structured data (JSON-LD) lisamine"
+        }
+      }
+    ]
   },
   "url": "https://signewilms.ee/seo-teenus.html",
   "review": {
@@ -53,7 +112,8 @@
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5",
-    "reviewCount": "1"
+    "reviewCount": "1",
+    "bestRating": "5"
   }
 }
 </script>
