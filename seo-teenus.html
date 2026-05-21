@@ -268,6 +268,13 @@ function gtag(){dataLayer.push(arguments);}
   footer p { font-size:0.76rem; color:rgba(255,255,255,0.35); font-weight:300; }
   footer a { color:rgba(255,255,255,0.35); text-decoration:none; font-size:0.76rem; transition:color 0.2s; }
   footer a:hover { color:var(--blue); }
+  .vaata-ka-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  .vaata-ka-kaart { background:var(--white); border-radius:8px; padding:28px; border-left:3px solid var(--blue); display:flex; flex-direction:column; gap:12px; }
+  .vaata-ka-kaart h3 { font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:600; margin-bottom:6px; }
+  .vaata-ka-kaart p { font-size:0.86rem; font-weight:300; line-height:1.75; color:var(--mid); flex:1; }
+  .vaata-ka-hind { display:inline-block; font-size:0.78rem; font-weight:500; color:var(--dark); background:var(--blue); padding:4px 12px; border-radius:20px; }
+  .vaata-ka-link { font-size:0.84rem; font-weight:500; color:var(--dark); text-decoration:none; display:inline-flex; align-items:center; gap:4px; transition:color 0.2s; }
+  .vaata-ka-link:hover { color:#1f6b9c; }
   @media (max-width:900px) {
     nav { padding:14px 20px; }
     .nav-toggle { display:block; }
