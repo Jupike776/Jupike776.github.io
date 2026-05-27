@@ -172,7 +172,7 @@ if(window.location.search){
 <meta property="og:image:width" content="1280">
 <meta property="og:image:height" content="640">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Kodulehe loomine & SEO seadistamine mikroettevõtjatele | Signe Wilms">
+<meta name="twitter:title" content="Kodulehe loomine &amp; SEO seadistamine mikroettevõtjatele | Signe Wilms">
 <meta name="twitter:description" content="Koduleht nullist 7 päevaga, SEO seadistamine, kodulehe audit ja assistendi kiirabi — Signe Wilms. Hinnad alates 50€. Esimene vestlus tasuta!">
 <meta name="twitter:image" content="https://signewilms.ee/og-pilt.png">
 <link rel="preload" as="image" href="signe-hero.webp" imagesrcset="signe-hero-sm.webp 400w, signe-hero.webp 800w" imagesizes="(max-width:900px) 100vw, 50vw" fetchpriority="high">
@@ -726,6 +726,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="https://zcal.co/i/GhMRsgoU" target="_blank" rel="noopener" class="btn-primary">Broneeri tasuta aeg →</a>
   </div>
 </section>
+
+<!-- ASKLY KIIRKÜSIMUS -->
+<section id="kiirkysimus" style="background:var(--dark);padding:80px 24px;text-align:center;">
+  <span style="display:inline-block;background:var(--blue);color:var(--dark);font-size:0.72rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:28px;">Kiire küsimus?</span>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3vw,3rem);font-weight:300;color:white;line-height:1.15;margin-bottom:20px;">Ära kirjuta e-kirja.<br>Küsi otse <em style="font-style:italic;color:var(--blue);">minult kohe.</em></h2>
+  <p style="font-size:0.95rem;font-weight:300;line-height:1.8;color:rgba(255,255,255,0.6);max-width:460px;margin:0 auto 36px;">Hind, tähtaeg, mis teenus sobib sinu ettevõttele? Minu juturobot vastab kohe ja mõne minutiga saad selguse kätte.</p>
+  <button onclick="openAskly()" style="background:var(--blue);color:var(--dark);padding:16px 40px;border-radius:4px;font-size:0.95rem;font-weight:500;letter-spacing:0.04em;border:none;cursor:pointer;transition:all 0.25s;" onmouseover="this.style.background='#7bb8d8'" onmouseout="this.style.background='var(--blue)'">💬 Alusta juttu</button>
+</section>
+<script>
+function openAskly(){
+  var el=document.querySelector('[class*="askly"],[id*="askly"],iframe[src*="askly"]');
+  if(el){el.click();return;}
+  if(window.AsklyWidget&&window.AsklyWidget.open){window.AsklyWidget.open();return;}
+  if(window.askly&&window.askly.open){window.askly.open();return;}
+  var btns=document.querySelectorAll('button,div[role="button"]');
+  for(var i=0;i<btns.length;i++){
+    var s=btns[i].getAttribute('class')||'';
+    if(s.toLowerCase().indexOf('chat')>-1||s.toLowerCase().indexOf('widget')>-1){btns[i].click();return;}
+  }
+}
+</script>
 
   <!-- CONTACT -->
 <section class="contact" id="kontakt">
