@@ -206,6 +206,8 @@ function gtag(){dataLayer.push(arguments);}
   .nav-links { display:flex; gap:32px; list-style:none; }
   .nav-links a { font-size:0.8rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--mid); text-decoration:none; transition:color 0.2s; }
   .nav-links a:hover { color:var(--dark); }
+  .nav-chat { background:none; border:1.5px solid var(--dark); color:var(--dark) !important; padding:7px 16px; border-radius:4px; font-size:0.8rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; cursor:pointer; font-family:'DM Sans',sans-serif; transition:all 0.2s; }
+  .nav-chat:hover { background:var(--dark); color:white !important; }
   .nav-toggle { display:none; background:none; border:none; font-size:1.6rem; cursor:pointer; color:var(--dark); padding:4px 8px; }
   .hero { padding:140px 80px 80px; background:var(--light); display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
   .hero-tag { display:inline-block; background:var(--blue); color:var(--dark); font-size:0.72rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; padding:6px 14px; border-radius:20px; margin-bottom:24px; }
@@ -314,6 +316,7 @@ function gtag(){dataLayer.push(arguments);}
     <li><a href="/#arvamused">Arvamused</a></li>
     <li><a href="/blogi/">Blogi</a></li>
     <li><a href="/#kontakt">Kontakt</a></li>
+    <li><button onclick="openAskly()" class="nav-chat">💬 Küsi kohe</button></li>
   </ul>
 </nav>
 <main>
@@ -598,6 +601,20 @@ function gtag(){dataLayer.push(arguments);}
   <p>SEO seadistamine 500€, ühekordne makse. Esimene vestlus on tasuta ja kohustuseta.</p>
   <a href="/#kontakt" class="btn-primary">Telli SEO seadistamine →</a>
 </section>
+
+<section id="kiirkysimus" style="background:var(--dark);padding:80px 24px;text-align:center;">
+  <span style="display:inline-block;background:var(--blue);color:var(--dark);font-size:0.72rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:28px;">Kiire küsimus?</span>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3vw,3rem);font-weight:300;color:white;line-height:1.15;margin-bottom:20px;">Ära kirjuta e-kirja.<br>Küsi otse <em style="font-style:italic;color:var(--blue);">minult kohe.</em></h2>
+  <p style="font-size:0.95rem;font-weight:300;line-height:1.8;color:rgba(255,255,255,0.6);max-width:460px;margin:0 auto 36px;">Hind, tähtaeg, mis sobib sinu ettevõttele? Minu juturobot vastab kohe ja mõne minutiga saad selguse kätte.</p>
+  <button onclick="openAskly()" style="background:var(--blue);color:var(--dark);padding:16px 40px;border-radius:4px;font-size:0.95rem;font-weight:500;letter-spacing:0.04em;border:none;cursor:pointer;transition:all 0.25s;" onmouseover="this.style.background='#7bb8d8'" onmouseout="this.style.background='var(--blue)'">💬 Alusta juttu</button>
+</section>
+<script>
+function openAskly(){
+  if(window.translateWiseApi&&window.translateWiseApi.openChatTab){
+    window.translateWiseApi.openChatTab();
+  }
+}
+</script>
 </main>
 <footer>
   <p>© 2026 Signe Wilms. Kõik õigused kaitstud.</p>
