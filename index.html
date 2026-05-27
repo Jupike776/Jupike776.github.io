@@ -736,14 +736,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 <script>
 function openAskly(){
-  var el=document.querySelector('[class*="askly"],[id*="askly"],iframe[src*="askly"]');
-  if(el){el.click();return;}
-  if(window.AsklyWidget&&window.AsklyWidget.open){window.AsklyWidget.open();return;}
-  if(window.askly&&window.askly.open){window.askly.open();return;}
-  var btns=document.querySelectorAll('button,div[role="button"]');
-  for(var i=0;i<btns.length;i++){
-    var s=btns[i].getAttribute('class')||'';
-    if(s.toLowerCase().indexOf('chat')>-1||s.toLowerCase().indexOf('widget')>-1){btns[i].click();return;}
+  if(window.translateWiseApi&&window.translateWiseApi.openChatTab){
+    window.translateWiseApi.openChatTab();
   }
 }
 </script>
