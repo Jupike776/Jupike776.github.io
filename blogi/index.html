@@ -3,15 +3,137 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blogi | Signe Wilms</title>
-<meta name="robots" content="noindex, follow">
-<meta http-equiv="refresh" content="0; url=https://blog.signewilms.ee">
-<link rel="canonical" href="https://blog.signewilms.ee">
-<link rel="icon" type="image/svg+xml" href="/Signe-Wimms-logo.svg">
+<title>Blogi — koduleht, SEO ja turundus väikeettevõtjale | Signe Wilms</title>
+<meta name="description" content="Praktilised artiklid kodulehe tegemisest, SEO seadistamisest ja digiturundusest. Kirjutan sellest, mida olen ise läbi proovinud.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://signewilms.ee/blogi/">
+<meta property="og:title" content="Blogi — koduleht, SEO ja turundus väikeettevõtjale">
+<meta property="og:description" content="Praktilised artiklid kodulehe tegemisest, SEO seadistamisest ja digiturundusest.">
+<meta property="og:url" content="https://signewilms.ee/blogi/">
+<meta property="og:type" content="website">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
-<script>window.location.replace("https://blog.signewilms.ee");</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Signe Wilms blogi",
+  "url": "https://signewilms.ee/blogi/",
+  "description": "Praktilised artiklid kodulehe tegemisest, SEO seadistamisest ja digiturundusest.",
+  "author": { "@type": "Person", "name": "Signe Wilms", "url": "https://signewilms.ee/minust.html" }
+}
+</script>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/cormorant-garamond-i300.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/cormorant-garamond-n300.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/dm-sans-n300.woff2" crossorigin>
+<script>
+window.dataLayer=window.dataLayer||[];
+(function(){var loaded=false;function loadGTM(){if(loaded)return;loaded=true;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5PX8WGG4');}
+['scroll','click','keydown','touchstart'].forEach(function(e){window.addEventListener(e,loadGTM,{once:true,passive:true});});setTimeout(loadGTM,5000);})();
+</script>
+<style>
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300 400;font-display:swap;src:url('/fonts/cormorant-garamond-i300.woff2') format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300 400 600;font-display:swap;src:url('/fonts/cormorant-garamond-n300.woff2') format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:300 400 500;font-display:swap;src:url('/fonts/dm-sans-n300.woff2') format('woff2')}
+:root{--blue:#a2d1ec;--peach:#ffeee9;--dark:#2c2c2c;--mid:#6b6b6b;--light:#f9f6f4;--white:#ffffff;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;color:var(--dark);background:var(--white);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 48px;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.93);backdrop-filter:blur(12px);border-bottom:1px solid rgba(162,209,236,0.2);}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--dark);text-decoration:none;}
+.nav-links{display:flex;gap:32px;list-style:none;}
+.nav-links a{font-size:0.8rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--dark);}
+.nav-chat{background:none;border:1.5px solid var(--dark);color:var(--dark)!important;padding:7px 16px;border-radius:4px;font-size:0.8rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all 0.2s;}
+.nav-chat:hover{background:var(--dark);color:white!important;}
+.nav-toggle{display:none;background:none;border:none;font-size:1.6rem;cursor:pointer;color:var(--dark);padding:4px 8px;}
+.blog-header{padding:120px 80px 60px;background:var(--light);text-align:center;}
+.blog-header h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.6rem);font-weight:300;line-height:1.1;margin-bottom:16px;}
+.blog-header h1 em{font-style:italic;color:#1f6b9c;}
+.blog-header p{font-size:0.95rem;font-weight:300;color:var(--mid);max-width:520px;margin:0 auto;}
+.blog-grid{max-width:960px;margin:0 auto;padding:60px 24px 80px;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:32px;}
+.post-card{background:var(--white);border:1px solid rgba(162,209,236,0.25);border-radius:12px;overflow:hidden;transition:box-shadow 0.2s,transform 0.2s;display:flex;flex-direction:column;}
+.post-card:hover{box-shadow:0 8px 32px rgba(44,44,44,0.09);transform:translateY(-3px);}
+.card-tag{display:inline-block;background:var(--blue);color:var(--dark);font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:5px 12px;border-radius:20px;margin:24px 24px 12px;}
+.card-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;line-height:1.2;padding:0 24px;margin-bottom:12px;color:var(--dark);}
+.card-excerpt{font-size:0.85rem;font-weight:300;line-height:1.8;color:var(--mid);padding:0 24px;margin-bottom:20px;flex:1;}
+.card-footer{padding:16px 24px 24px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(162,209,236,0.2);}
+.card-date{font-size:0.76rem;color:var(--mid);font-weight:300;}
+.card-link{font-size:0.78rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--dark);text-decoration:none;transition:color 0.2s;}
+.card-link:hover{color:#1f6b9c;}
+footer{background:#1a1a1a;padding:24px 80px;display:flex;justify-content:space-between;align-items:center;}
+footer p{font-size:0.76rem;color:rgba(255,255,255,0.35);font-weight:300;}
+footer a{color:rgba(255,255,255,0.35);text-decoration:none;font-size:0.76rem;transition:color 0.2s;}
+footer a:hover{color:var(--blue);}
+@media(max-width:900px){
+  nav{padding:14px 20px;}
+  .nav-toggle{display:block;}
+  .nav-links{display:none;flex-direction:column;width:100%;gap:0;padding:10px 0;}
+  nav.open .nav-links{display:flex;}
+  .nav-links li{padding:10px 4px;border-bottom:1px solid rgba(0,0,0,0.05);}
+  .blog-header{padding:100px 24px 48px;}
+  .blog-grid{padding:40px 20px 60px;gap:20px;}
+  footer{padding:20px 24px;flex-direction:column;gap:8px;text-align:center;}
+}
+</style>
 </head>
 <body>
-<p>Suunan blogi lehele… <a href="https://blog.signewilms.ee">Kliki siia, kui ei suuna automaatselt.</a></p>
+<nav id="main-nav">
+  <a class="nav-logo" href="/">Signe Wilms</a>
+  <button class="nav-toggle" onclick="document.getElementById('main-nav').classList.toggle('open')">☰</button>
+  <ul class="nav-links">
+    <li><a href="/minust.html">Minust</a></li>
+    <li><a href="/#teenused">Teenused</a></li>
+    <li><a href="/#hinnakiri">Hinnakiri</a></li>
+    <li><a href="/#arvamused">Arvamused</a></li>
+    <li><a href="/blogi/" class="active">Blogi</a></li>
+    <li><a href="/#kontakt">Kontakt</a></li>
+    <li><button onclick="openAskly()" class="nav-chat">💬 Küsi kohe</button></li>
+  </ul>
+</nav>
+<main>
+<header class="blog-header">
+  <h1>Artiklid <em>kodulehest,</em><br>SEO-st ja turundusest</h1>
+  <p>Kirjutan sellest, mida olen ise läbi proovinud. Praktilised juhised väikeettevõtjale.</p>
+</header>
+
+<section class="blog-grid">
+
+  <article class="post-card">
+    <span class="card-tag">SEO juhend</span>
+    <h2 class="card-title">Kuidas kontrollida kodulehe SEO-d? 5 sammu</h2>
+    <p class="card-excerpt">Sa ei pea olema tehnikaguru, et oma kodulehe SEO olukorra kohta selgust saada. Need 5 sammu saad teha ise, tasuta tööriistadega, umbes tunni ajaga.</p>
+    <div class="card-footer">
+      <span class="card-date">10. juuni 2026</span>
+      <a class="card-link" href="/blogi/kuidas-kontrollida-kodulehe-seo-d.html">Loe edasi →</a>
+    </div>
+  </article>
+
+  <article class="post-card">
+    <span class="card-tag">SEO</span>
+    <h2 class="card-title">Miks koduleht ei ilmu Googles? Minu lugu</h2>
+    <p class="card-excerpt">Mitu aastat oli mul koduleht olemas, aga Google ei leidnud seda üles. Siin on kolm peamist põhjust ja kuidas ma need lahendasin.</p>
+    <div class="card-footer">
+      <span class="card-date">10. juuni 2026</span>
+      <a class="card-link" href="/blogi/miks-koduleht-ei-ilmu-googles.html">Loe edasi →</a>
+    </div>
+  </article>
+
+  <article class="post-card">
+    <span class="card-tag">Koduleht</span>
+    <h2 class="card-title">„Koduleht sai küll kunagi tehtud…" miks väikeettevõtja koduleht seisab paigal?</h2>
+    <p class="card-excerpt">Enamik väikeettevõtjaid teab, et nende koduleht vajab uuendamist. Aga aeg läheb ja leht jääb samaks. Mis on vana kodulehe tegelik hind?</p>
+    <div class="card-footer">
+      <span class="card-date">10. juuni 2026</span>
+      <a class="card-link" href="/blogi/uus-koduleht-vaikeettevotjale.html">Loe edasi →</a>
+    </div>
+  </article>
+
+</section>
+</main>
+<footer>
+  <p>© 2026 Signe Wilms. Kõik õigused kaitstud.</p>
+  <a href="mailto:signewilms@gmail.com">signewilms@gmail.com</a>
+</footer>
+<script src="https://chat.askly.me/cw/chat/latest.js" tw-client-key="pa4b3cd1nyslvbvmo6kjggss" async></script>
 </body>
 </html>
