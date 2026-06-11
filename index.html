@@ -484,7 +484,22 @@ function gtag(){dataLayer.push(arguments);}
     footer { padding:20px 24px; flex-direction:column; gap:8px; text-align:center; }
   }
 </style>
-<script src="https://chat.askly.me/cw/chat/latest.js" tw-client-key="pa4b3cd1nyslvbvmo6kjggss" async ></script>
+<script>
+(function(){
+  var loaded=false;
+  function loadAskly(){
+    if(loaded)return;loaded=true;
+    var s=document.createElement('script');s.async=true;
+    s.setAttribute('tw-client-key','pa4b3cd1nyslvbvmo6kjggss');
+    s.src='https://chat.askly.me/cw/chat/latest.js';
+    document.head.appendChild(s);
+  }
+  ['scroll','click','keydown','touchstart'].forEach(function(e){
+    window.addEventListener(e,loadAskly,{once:true,passive:true});
+  });
+  setTimeout(loadAskly,5000);
+})();
+</script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -643,7 +658,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span>Smaily Certified Partner</span>
       </a>
       <a href="https://www.veebimajutus.ee" target="_blank" rel="noopener noreferrer" class="partner-item">
-        <img src="/veebimajutus-partner-badge-2.svg" alt="Veebimajutus.ee ametlik partner" style="height:72px;width:auto;">
+        <img src="/veebimajutus-partner-badge-2.svg" alt="Veebimajutus.ee ametlik partner" style="height:72px;width:auto;" loading="lazy">
         <span>Veebimajutus.ee ametlik partner</span>
       </a>
     </div>
