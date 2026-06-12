@@ -407,10 +407,14 @@ function gtag(){dataLayer.push(arguments);}
   .testimonials-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:28px; }
   .testimonial-card { background:var(--light); border-radius:8px; padding:36px 32px; position:relative; }
   .testimonial-card::before { content:'"'; font-family:'Cormorant Garamond',serif; font-size:5rem; color:var(--blue); position:absolute; top:-8px; left:24px; line-height:1; opacity:0.6; }
-  .testimonial-text { font-size:0.9rem; font-weight:300; line-height:1.8; color:var(--dark); margin-bottom:20px; padding-top:32px; font-style:italic; }
+  .testimonial-stars { color:#f5a623; font-size:0.95rem; letter-spacing:2px; margin-bottom:10px; padding-top:32px; line-height:1; }
+  .testimonial-text { font-size:0.9rem; font-weight:300; line-height:1.8; color:var(--dark); margin-bottom:20px; padding-top:0; font-style:italic; }
   .testimonial-author { display:flex; flex-direction:column; gap:2px; }
   .testimonial-name { font-weight:500; font-size:0.88rem; }
   .testimonial-role { font-size:0.78rem; color:var(--mid); font-weight:300; }
+  .rating-summary { display:flex; align-items:center; justify-content:center; gap:10px; margin-top:16px; }
+  .rating-summary-stars { color:#f5a623; font-size:1.3rem; letter-spacing:3px; }
+  .rating-summary-text { font-size:0.88rem; font-weight:300; color:var(--mid); }
 
   /* BLOGI */
   .blogi { padding:120px 80px; background:var(--light); }
@@ -670,9 +674,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="section-header">
     <span class="section-tag">Klientide arvamused</span>
     <h2>Mida öeldakse<br><em>koostöö kohta</em></h2>
+    <div class="rating-summary">
+      <span class="rating-summary-stars" aria-label="5 tähte 5-st">★★★★★</span>
+      <span class="rating-summary-text">5,0 · 10 arvamust</span>
+    </div>
   </div>
   <div class="testimonials-grid">
     <div class="testimonial-card">
+      <div class="testimonial-stars" aria-label="5 tähte 5-st">★★★★★</div>
       <p class="testimonial-text">Signe on inimene, kellega saab kiiresti ja loomulikult "ühele lainele". Ta on soe, siiras, toetav ja alati valmis aitama. Tema positiivne energia ja professionaalsus teevad temaga koostöö lihtsaks ja nauditavaks.</p>
       <div class="testimonial-author">
         <span class="testimonial-name">Tiina Põld</span>
@@ -680,6 +689,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div class="testimonial-card">
+      <div class="testimonial-stars" aria-label="5 tähte 5-st">★★★★★</div>
       <p class="testimonial-text">Kiire info vahetus, meeldiv suhtlus ja sain probleemile kiire lahenduse. Kiidan ja soovitan!</p>
       <div class="testimonial-author">
         <span class="testimonial-name">Signe Paju</span>
@@ -687,6 +697,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div class="testimonial-card">
+      <div class="testimonial-stars" aria-label="5 tähte 5-st">★★★★★</div>
       <p class="testimonial-text">Teen Signega koostööd juba pea poolteist aastat ja minu senine kogemus virtuaalassistentidega koostööst on temaga parim! Eriti muljetavaldav on tema kiirus.</p>
       <div class="testimonial-author">
         <span class="testimonial-name">Kaire Parve</span>
@@ -694,6 +705,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div class="testimonial-card">
+      <div class="testimonial-stars" aria-label="5 tähte 5-st">★★★★★</div>
       <p class="testimonial-text">Signe paistis silma oma selge mõtlemise, koostööoskuse ja rahuliku, aga sihikindla tegutsemisega. Aja jooksul kujunes sellest välja ka soe ja usaldusväärne sõprus.</p>
       <div class="testimonial-author">
         <span class="testimonial-name">Kristi Moorits</span>
@@ -701,6 +713,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       </div>
     <div class="testimonial-card">
+      <div class="testimonial-stars" aria-label="5 tähte 5-st">★★★★★</div>
       <p class="testimonial-text">Signe on positiivse ellusuhtumisega, siiras ja avatud inimene. Ta on otsekohene, teab täpselt, mida tahab, ega jää kinni perfektsionismi. Annab endast parima ja liigub eesmärgi suunas. Peab oluliseks, et keegi ei jääks kinni ülemõtlemisse.</p>
       <div class="testimonial-author">
         <span class="testimonial-name">Mailis Vahenurm</span>
@@ -708,6 +721,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       </div>
     <div class="testimonial-card">
+      <div class="testimonial-stars" aria-label="5 tähte 5-st">★★★★★</div>
       <p class="testimonial-text">Mul olid kodulehe uuendused pikalt ootel kuni otsustasin abi küsida. Koostöö sujus väga kiiresti ja juba sama päeva õhtuks oli kõik tehtud. Hindan kõige rohkem Signe iseseisvust ja kindlat tegutsemist. Signe teab täpselt, mida teeb.</p>
       <div class="testimonial-author">
         <span class="testimonial-name">Piret Viherpuu</span>
@@ -715,6 +729,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       </div>
     <div class="testimonial-card">
+      <div class="testimonial-stars" aria-label="5 tähte 5-st">★★★★★</div>
       <p class="testimonial-text">Signega tutvusin notariajast, kui olin nooremmaakler. Olen tema abiga muutunud oluliselt efektiivsemaks ja soovitan teda kõigile, kes hindavad professionaalsust ja usaldusväärsust.</p>
       <div class="testimonial-author">
         <span class="testimonial-name">Jane Võsso</span>
@@ -722,6 +737,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div class="testimonial-card">
+      <div class="testimonial-stars" aria-label="5 tähte 5-st">★★★★★</div>
       <p class="testimonial-text">Signe ei tulnud minu meeskonda kõike teades. Ei andnud alla ka siis, kui oli raske, segane ja üle jõu käiv. Just see tahe kasvada ja protsessi usaldada tegi temast inimese, kellele ma täna vaatan suure uhkusega.</p>
       <div class="testimonial-author">
         <span class="testimonial-name">Marika Hanson</span>
@@ -729,6 +745,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div class="testimonial-card">
+      <div class="testimonial-stars" aria-label="5 tähte 5-st">★★★★★</div>
       <p class="testimonial-text">Signe aitas mind virtuaalse assistendi rollis. Signe oli väga kiire ja kohusetundlik — mul oli endal raske järele jõuda, et ta saaks oma osa minu asjadest hästi teha.</p>
       <div class="testimonial-author">
         <span class="testimonial-name">Toomas Tamsar</span>
@@ -736,6 +753,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div class="testimonial-card">
+      <div class="testimonial-stars" aria-label="5 tähte 5-st">★★★★★</div>
       <p class="testimonial-text">Signega on kerge koostööd teha ja ta aitab mind täpselt seal, kus mu oma oskused ja energia otsa lõpevad. Ta reageerib kiirelt, on otsekohene ja annab ka oma kogemusele toetudes nõus. Mõnikord pakub välja ka edasi viivaid ideid, mille peale ise pole tulnudki. Ta täiendab ennast pidevalt ja nii on ta minu soovidest oma oskustega ees. Ja kui miskit ei tea, siis uurib välja. Jätkan kindlasti Signe teenuste kasutamist! Olen väga tänulik!</p>
       <div class="testimonial-author">
         <span class="testimonial-name">Anneli Pille</span>
