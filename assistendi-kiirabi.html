@@ -125,6 +125,30 @@ function gtag(){dataLayer.push(arguments);}
   setTimeout(loadGTM,5000);
 })();
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll("a[href*='zcal.co']").forEach(function(el) {
+    el.addEventListener("click", function() {
+      gtag("event", "booking_click", { event_category: "conversion", event_label: this.href });
+    });
+  });
+  document.querySelectorAll("a[href^='mailto:']").forEach(function(el) {
+    el.addEventListener("click", function() {
+      gtag("event", "email_click", { event_category: "contact", event_label: this.href });
+    });
+  });
+  document.querySelectorAll("a[href^='tel:']").forEach(function(el) {
+    el.addEventListener("click", function() {
+      gtag("event", "phone_click", { event_category: "contact", event_label: this.href });
+    });
+  });
+  document.querySelectorAll("form").forEach(function(el) {
+    el.addEventListener("submit", function() {
+      gtag("event", "contact_form_submit", { event_category: "contact", event_label: "contact_form" });
+    });
+  });
+});
+</script>
 <style>
 @font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300 400;font-display:swap;src:url('/fonts/cormorant-garamond-i300.woff2') format('woff2')}
 @font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300 400 600;font-display:swap;src:url('/fonts/cormorant-garamond-n300.woff2') format('woff2')}
