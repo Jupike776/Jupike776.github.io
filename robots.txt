@@ -1,8 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /404.html
-Disallow: /blog/vortsjarv-kalad-ja-loodus.html
-Disallow: /blog/vortsjarv-looduse-ilu.html
+Disallow: /blog/
 Disallow: /*?page_id=
 
 Sitemap: https://signewilms.ee/sitemap.xml
