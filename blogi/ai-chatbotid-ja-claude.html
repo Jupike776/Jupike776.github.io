@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miks inimesed lüüvad AI-le blokki — ja üks avastus, mis mind üllatas | Signe Wilms</title>
+<meta name="description" content="AI on igal pool ja inimesed hakkavad sellest väsima. Miks see juhtub — ja kuidas ma ise Claudet kasutan nii, et see ei tunduks võlts.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://signewilms.ee/blogi/ai-chatbotid-ja-claude.html">
+<meta property="og:title" content="Miks inimesed lüüvad AI-le blokki — ja üks avastus, mis mind üllatas">
+<meta property="og:description" content="AI on igal pool ja inimesed hakkavad sellest väsima. Miks see juhtub — ja kuidas ma ise Claudet kasutan nii, et see ei tunduks võlts.">
+<meta property="og:url" content="https://signewilms.ee/blogi/ai-chatbotid-ja-claude.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Miks inimesed lüüvad AI-le blokki — ja üks avastus, mis mind üllatas">
+<meta name="twitter:description" content="AI on igal pool ja inimesed hakkavad sellest väsima. Miks see juhtub — ja kuidas ma ise Claudet kasutan nii, et see ei tunduks võlts.">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Miks inimesed lüüvad AI-le blokki — ja üks avastus, mis mind üllatas",
+  "description": "AI on igal pool ja inimesed hakkavad sellest väsima. Miks see juhtub — ja kuidas ma ise Claudet kasutan nii, et see ei tunduks võlts.",
+  "datePublished": "2026-06-14",
+  "author": { "@type": "Person", "name": "Signe Wilms", "url": "https://signewilms.ee/minust.html" },
+  "publisher": { "@type": "Person", "name": "Signe Wilms", "url": "https://signewilms.ee" },
+  "url": "https://signewilms.ee/blogi/ai-chatbotid-ja-claude.html",
+  "keywords": ["AI", "chatbot", "Claude", "tehisintellekt", "AI turundus", "digiturundus"]
+}
+</script>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/cormorant-garamond-i300.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/cormorant-garamond-n300.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/dm-sans-n300.woff2" crossorigin>
+<script>
+window.dataLayer=window.dataLayer||[];
+(function(){var loaded=false;function loadGTM(){if(loaded)return;loaded=true;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5PX8WGG4');}
+['scroll','click','keydown','touchstart'].forEach(function(e){window.addEventListener(e,loadGTM,{once:true,passive:true});});setTimeout(loadGTM,5000);})();
+</script>
+<style>
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300 400;font-display:swap;src:url('/fonts/cormorant-garamond-i300.woff2') format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300 400 600;font-display:swap;src:url('/fonts/cormorant-garamond-n300.woff2') format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:300 400 500;font-display:swap;src:url('/fonts/dm-sans-n300.woff2') format('woff2')}
+:root{--blue:#a2d1ec;--peach:#ffeee9;--dark:#2c2c2c;--mid:#6b6b6b;--light:#f9f6f4;--white:#ffffff;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;color:var(--dark);background:var(--white);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 48px;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.93);backdrop-filter:blur(12px);border-bottom:1px solid rgba(162,209,236,0.2);}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--dark);text-decoration:none;}
+.nav-links{display:flex;gap:32px;list-style:none;}
+.nav-links a{font-size:0.8rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--dark);}
+.nav-chat{background:none;border:1.5px solid var(--dark);color:var(--dark)!important;padding:7px 16px;border-radius:4px;font-size:0.8rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all 0.2s;}
+.nav-chat:hover{background:var(--dark);color:white!important;}
+.nav-toggle{display:none;background:none;border:none;font-size:1.6rem;cursor:pointer;color:var(--dark);padding:4px 8px;}
+.post-header{padding:120px 80px 60px;background:var(--light);text-align:center;}
+.post-tag{display:inline-block;background:var(--blue);color:var(--dark);font-size:0.72rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:20px;}
+.post-header h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;line-height:1.15;margin-bottom:16px;max-width:760px;margin-left:auto;margin-right:auto;}
+.post-date{font-size:0.8rem;color:var(--mid);font-weight:300;}
+.post-body{max-width:680px;margin:0 auto;padding:60px 24px 80px;}
+.post-body p{font-size:0.97rem;font-weight:300;line-height:1.9;color:var(--dark);margin-bottom:24px;}
+.post-body h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:300;line-height:1.2;margin:40px 0 16px;color:var(--dark);}
+.post-body h2 em{font-style:italic;color:#1f6b9c;}
+.post-body strong{font-weight:500;}
+.post-body blockquote{border-left:3px solid var(--blue);padding:16px 24px;margin:28px 0;background:var(--light);border-radius:0 8px 8px 0;}
+.post-body blockquote p{margin:0;font-style:italic;color:var(--mid);}
+.post-body ul{margin:0 0 24px 0;padding-left:0;list-style:none;}
+.post-body ul li{font-size:0.97rem;font-weight:300;line-height:1.9;padding:4px 0 4px 20px;position:relative;}
+.post-body ul li::before{content:"→";position:absolute;left:0;color:var(--blue);}
+.cta-section{text-align:center;padding:80px 80px;background:var(--dark);color:white;}
+.cta-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;margin-bottom:14px;}
+.cta-section h2 em{font-style:italic;color:var(--blue);}
+.cta-section p{font-size:0.92rem;font-weight:300;color:rgba(255,255,255,0.65);margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.8;}
+.btn-primary{display:inline-block;background:var(--blue);color:var(--dark);padding:14px 32px;border-radius:4px;font-size:0.85rem;font-weight:500;letter-spacing:0.04em;text-decoration:none;transition:all 0.25s;}
+.btn-primary:hover{background:white;}
+.back-link{display:inline-flex;align-items:center;gap:6px;font-size:0.82rem;font-weight:500;color:var(--mid);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:40px;transition:color 0.2s;}
+.back-link:hover{color:var(--dark);}
+footer{background:#1a1a1a;padding:24px 80px;display:flex;justify-content:space-between;align-items:center;}
+footer p{font-size:0.76rem;color:rgba(255,255,255,0.35);font-weight:300;}
+footer a{color:rgba(255,255,255,0.35);text-decoration:none;font-size:0.76rem;transition:color 0.2s;}
+footer a:hover{color:var(--blue);}
+@media(max-width:900px){
+  nav{padding:14px 20px;}
+  .nav-toggle{display:block;}
+  .nav-links{display:none;flex-direction:column;width:100%;gap:0;padding:10px 0;}
+  nav.open .nav-links{display:flex;}
+  .nav-links li{padding:10px 4px;border-bottom:1px solid rgba(0,0,0,0.05);}
+  .post-header{padding:100px 24px 48px;}
+  .post-body{padding:40px 24px 60px;}
+  .cta-section{padding:60px 24px;}
+  footer{padding:20px 24px;flex-direction:column;gap:8px;text-align:center;}
+}
+</style>
+</head>
+<body>
+<nav id="main-nav">
+  <a class="nav-logo" href="/">Signe Wilms</a>
+  <button class="nav-toggle" onclick="document.getElementById('main-nav').classList.toggle('open')">☰</button>
+  <ul class="nav-links">
+    <li><a href="/minust.html">Minust</a></li>
+    <li><a href="/#teenused">Teenused</a></li>
+    <li><a href="/#hinnakiri">Hinnakiri</a></li>
+    <li><a href="/#arvamused">Arvamused</a></li>
+    <li><a href="/blogi/" class="active">Blogi</a></li>
+    <li><a href="/#kontakt">Kontakt</a></li>
+    <li><button onclick="openAskly()" class="nav-chat">💬 Küsi kohe</button></li>
+  </ul>
+</nav>
+<main>
+<header class="post-header">
+  <span class="post-tag">AI &amp; digiturundus</span>
+  <h1>Miks inimesed lüüvad AI-le blokki —<br><em>ja üks avastus, mis mind üllatas</em></h1>
+  <p class="post-date">14. juuni 2026 · Signe Wilms</p>
+</header>
+<article class="post-body">
+  <a href="/blogi/" class="back-link">← Tagasi blogi</a>
+
+  <p>Olen viimasel ajal kuulnud üha rohkem inimesi ütlemas: „Ei viitsi enam. Igal pool on see AI." Kodulehtedel vilguvad chatbotid, mis küsivad „Kuidas saan teid aidata?" E-kirjad on nii lihvitult kirjutatud, et tunduvad võltsi. Instagrami postitused lõpevad kõik sama mustriga — kolm punkti, siis üleskutse.</p>
+
+  <p>Ja inimesed tunnevad seda. Nad ei pruugi osata öelda, mis täpselt valesti on — aga midagi tundub kummaliselt tühjana.</p>
+
+  <blockquote><p>„See on nagu räägiksid kellegagi, kes teeskleb, et ta kuulab."</p></blockquote>
+
+  <p>Nii kirjeldas üks tuttav oma kogemust ühe ettevõtte klienditoega. Ta ei teadnud, et räägib robotiga. Ja see ongi probleem.</p>
+
+  <h2>Miks inimesed <em>väsivad AI-st?</em></h2>
+
+  <p>AI ise pole probleem. Probleem on AI, mis teeskleb, et ta on inimene — või mida kasutatakse selleks, et asendada asju, mis peaksid olema päris.</p>
+
+  <p>Mõtle, mis juhtub, kui saad sõbralt sõnumi, mis kõlab nagu tema, aga midagi on veidi vale. Liiga hoolikalt sõnastatud. Liiga täiuslik. Ajad pea viltu ja mõtled — kas ta kirjutas selle ise?</p>
+
+  <p>Täpselt seda tunnet tekitab liigne AI turunduses:</p>
+
+  <ul>
+    <li>Kõik vastused kõlavad ühtemoodi lihvitult — aga tunnetuseta.</li>
+    <li>Ei tea enam, kas see on päris inimene või robot.</li>
+    <li>Usaldus kaob, sest pole selge, millega sul tegemist on.</li>
+    <li>Kõik tundub optimeeritud — aga mitte aus.</li>
+  </ul>
+
+  <p>Inimesed ei lükka tagasi tehisintellekti kui tööriista. Nad lükkavad tagasi pettuse.</p>
+
+  <h2>Minu avastus — <em>Claude brauseri külgpaneelina</em></h2>
+
+  <p>Mina kasutan Claudet iga päev. See on Anthropicu loodud tehisintellekt — ja hiljuti leidsin, et seda saab kasutada otse Chrome'i brauseris, ilma vahekaarti vahetamata. Küljepaneel avaneb, Claude on kohal, ja saad küsida küsimuse just selle lehe kohta, mida parasjagu vaatad.</p>
+
+  <p>Esimene asi, mida paneel ütleb: <strong>„Claude is AI and can make mistakes. Please double-check responses."</strong></p>
+
+  <p>See lause on väike, aga oluline. Claude ei tee saladust sellest, mis ta on. Ja see ongi see, mis eristab head AI kasutamist halvast.</p>
+
+  <h2>Milleks ma Claudet <em>päriselt kasutan?</em></h2>
+
+  <p>Tahan olla aus — ka mina kasutan AI-d oma töös. Siin on, kuidas:</p>
+
+  <ul>
+    <li><strong>Ideede läbipõrkamine.</strong> Kirjutan mõtte, küsin „mis on nõrk koht?" ja saan tagasisidet, millest alustada.</li>
+    <li><strong>Andmete analüüs.</strong> Google Search Console'i andmed, UTM-lingid, lehtede statistika — Claude aitab kiiresti näha, mis on oluline.</li>
+    <li><strong>Tekstide kiirendamine.</strong> Kirjutan ise esimese versiooni, Claude aitab seda struktureerida. Lõplik tekst on alati minu oma.</li>
+    <li><strong>Tehnilised küsimused.</strong> HTML, meta kirjeldused, schema — asju, mida ma ise oskan, aga kus Claude aitab kiiremini.</li>
+  </ul>
+
+  <p>Ja siin on, milleks ma AI-d <strong>ei kasuta:</strong></p>
+
+  <ul>
+    <li>Klientidega suhtlemiseks. Iga e-kiri, mille sa minult saad, on minult.</li>
+    <li>Oma hääle asendamiseks. Minu blogi, minu Instagrami postitused — need peavad kõlama nagu mina, mitte nagu optimeeritud tekst.</li>
+    <li>Otsuste tegemiseks. Claude saab pakkuda võimalusi, aga otsus on alati minu.</li>
+  </ul>
+
+  <h2>Mis on siis <em>õige tasakaal?</em></h2>
+
+  <p>Ma arvan, et küsimus pole „kas kasutada AI-d või mitte." Küsimus on: <strong>kas see, mida sa teed, on aus?</strong></p>
+
+  <p>Kui kasutad AI-d tööriistana — nagu kalkulaatorit, nagu grammatikakontrollijat, nagu andmeanalüüsi abivahendit — siis see töötab. Inimene on taga, inimene vastutab, inimene räägib sinuga.</p>
+
+  <p>Kui kasutad AI-d selleks, et asendada enda kohalolemist — see on see, mille vastu inimesed blokki löövad. Ja õigustatult.</p>
+
+  <blockquote><p>Inimesed ei osta teenust masinalt. Nad ostavad usaldusväärselt inimeselt, kes kasutab häid tööriistu.</p></blockquote>
+
+  <p>Claude'i brauseri külgpaneel on minu jaoks hea tööriist just sellepärast, et ta ei tee saladust sellest, mis ta on. Ta on abivahend — mitte asendus.</p>
+
+  <p>Ja seda ma soovin ka oma klientidele: kasutage AI-d julgelt, aga jääge ise kohale. Teie hääl, teie otsus, teie suhe kliendiga — seda ei asenda ükski tööriist.</p>
+
+</article>
+
+<section class="cta-section">
+  <h2>Tahad rääkida, <em>kuidas AI sinu ettevõttes töötab?</em></h2>
+  <p>Aitan seadistada digitaalsed tööriistad nii, et need toetavad sinu tööd — mitte ei asenda sinu häält. Esimene vestlus on tasuta.</p>
+  <a href="/#kontakt" class="btn-primary">Võta ühendust →</a>
+</section>
+</main>
+<footer>
+  <p>© 2026 Signe Wilms. Kõik õigused kaitstud.</p>
+  <a href="mailto:signewilms@gmail.com">signewilms@gmail.com</a>
+</footer>
+<script src="https://chat.askly.me/cw/chat/latest.js" tw-client-key="pa4b3cd1nyslvbvmo6kjggss" async></script>
+<script>
+function openAskly(){if(window.translateWiseApi&&window.translateWiseApi.openChatTab){window.translateWiseApi.openChatTab();}}
+document.getElementById('main-nav').querySelector('.nav-toggle').addEventListener('click',function(){document.getElementById('main-nav').classList.toggle('open');});
+</script>
+</body>
+</html>
