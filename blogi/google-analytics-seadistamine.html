@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Analytics seadistamine samm-sammult | Signe Wilms</title>
+<meta name="description" content="Kuidas seadistada Google Analytics 4 oma kodulehele? Selge juhend samm-sammult — konto loomine, koodi paigaldamine, esimeste andmete lugemine.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://signewilms.ee/blogi/google-analytics-seadistamine.html">
+<meta property="og:title" content="Google Analytics seadistamine samm-sammult">
+<meta property="og:description" content="Kuidas seadistada Google Analytics 4 oma kodulehele? Selge juhend samm-sammult — konto loomine, koodi paigaldamine, esimeste andmete lugemine.">
+<meta property="og:url" content="https://signewilms.ee/blogi/google-analytics-seadistamine.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Google Analytics seadistamine samm-sammult">
+<meta name="twitter:description" content="Kuidas seadistada Google Analytics 4 oma kodulehele? Selge juhend väikeettevõtjale.">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Google Analytics seadistamine samm-sammult",
+  "description": "Kuidas seadistada Google Analytics 4 oma kodulehele? Selge juhend samm-sammult — konto loomine, koodi paigaldamine, esimeste andmete lugemine.",
+  "datePublished": "2026-06-18",
+  "author": { "@type": "Person", "name": "Signe Wilms", "url": "https://signewilms.ee/minust.html" },
+  "publisher": { "@type": "Person", "name": "Signe Wilms", "url": "https://signewilms.ee" },
+  "url": "https://signewilms.ee/blogi/google-analytics-seadistamine.html",
+  "keywords": ["google analytics seadistamine", "google analytics 4", "GA4 seadistamine", "kodulehe külastuste mõõtmine", "google analytics eesti"]
+}
+</script>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/cormorant-garamond-i300.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/cormorant-garamond-n300.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/dm-sans-n300.woff2" crossorigin>
+<script>
+window.dataLayer=window.dataLayer||[];
+(function(){var loaded=false;function loadGTM(){if(loaded)return;loaded=true;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5PX8WGG4');}
+['scroll','click','keydown','touchstart'].forEach(function(e){window.addEventListener(e,loadGTM,{once:true,passive:true});});setTimeout(loadGTM,5000);})();
+</script>
+<style>
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300 400;font-display:swap;src:url('/fonts/cormorant-garamond-i300.woff2') format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300 400 600;font-display:swap;src:url('/fonts/cormorant-garamond-n300.woff2') format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:300 400 500;font-display:swap;src:url('/fonts/dm-sans-n300.woff2') format('woff2')}
+:root{--blue:#a2d1ec;--peach:#ffeee9;--dark:#2c2c2c;--mid:#6b6b6b;--light:#f9f6f4;--white:#ffffff;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;color:var(--dark);background:var(--white);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 48px;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.93);backdrop-filter:blur(12px);border-bottom:1px solid rgba(162,209,236,0.2);}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--dark);text-decoration:none;}
+.nav-links{display:flex;gap:32px;list-style:none;}
+.nav-links a{font-size:0.8rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--dark);}
+.nav-chat{background:none;border:1.5px solid var(--dark);color:var(--dark)!important;padding:7px 16px;border-radius:4px;font-size:0.8rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all 0.2s;}
+.nav-chat:hover{background:var(--dark);color:white!important;}
+.nav-toggle{display:none;background:none;border:none;font-size:1.6rem;cursor:pointer;color:var(--dark);padding:4px 8px;}
+.post-header{padding:120px 80px 60px;background:var(--light);text-align:center;}
+.post-tag{display:inline-block;background:var(--blue);color:var(--dark);font-size:0.72rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:20px;}
+.post-header h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;line-height:1.15;margin-bottom:16px;max-width:760px;margin-left:auto;margin-right:auto;}
+.post-date{font-size:0.8rem;color:var(--mid);font-weight:300;}
+.post-body{max-width:680px;margin:0 auto;padding:60px 24px 80px;}
+.post-body p{font-size:0.97rem;font-weight:300;line-height:1.9;color:var(--dark);margin-bottom:24px;}
+.post-body h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:300;line-height:1.2;margin:40px 0 16px;color:var(--dark);}
+.post-body h2 em{font-style:italic;color:#1f6b9c;}
+.post-body strong{font-weight:500;}
+.post-body blockquote{border-left:3px solid var(--blue);padding:16px 24px;margin:28px 0;background:var(--light);border-radius:0 8px 8px 0;}
+.post-body blockquote p{margin:0;font-style:italic;color:var(--mid);}
+.step-box{background:var(--light);border-radius:12px;padding:28px 32px;margin:32px 0;}
+.step-number{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:var(--blue);line-height:1;margin-bottom:8px;}
+.step-box h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;margin-bottom:10px;}
+.step-box p{margin-bottom:0;}
+.cta-section{text-align:center;padding:80px 80px;background:var(--dark);color:white;}
+.cta-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;margin-bottom:14px;}
+.cta-section h2 em{font-style:italic;color:var(--blue);}
+.cta-section p{font-size:0.92rem;font-weight:300;color:rgba(255,255,255,0.65);margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.8;}
+.btn-primary{display:inline-block;background:var(--blue);color:var(--dark);padding:14px 32px;border-radius:4px;font-size:0.85rem;font-weight:500;letter-spacing:0.04em;text-decoration:none;transition:all 0.25s;}
+.btn-primary:hover{background:white;}
+.back-link{display:inline-flex;align-items:center;gap:6px;font-size:0.82rem;font-weight:500;color:var(--mid);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:40px;transition:color 0.2s;}
+.back-link:hover{color:var(--dark);}
+footer{background:#1a1a1a;padding:24px 80px;display:flex;justify-content:space-between;align-items:center;}
+footer p{font-size:0.76rem;color:rgba(255,255,255,0.35);font-weight:300;}
+footer a{color:rgba(255,255,255,0.35);text-decoration:none;font-size:0.76rem;transition:color 0.2s;}
+footer a:hover{color:var(--blue);}
+@media(max-width:900px){
+  nav{padding:14px 20px;}
+  .nav-toggle{display:block;}
+  .nav-links{display:none;flex-direction:column;width:100%;gap:0;padding:10px 0;}
+  nav.open .nav-links{display:flex;}
+  .nav-links li{padding:10px 4px;border-bottom:1px solid rgba(0,0,0,0.05);}
+  .post-header{padding:100px 24px 48px;}
+  .post-body{padding:40px 24px 60px;}
+  .step-box{padding:20px 20px;}
+  .cta-section{padding:60px 24px;}
+  footer{padding:20px 24px;flex-direction:column;gap:8px;text-align:center;}
+}
+</style>
+</head>
+<body>
+<nav id="main-nav">
+  <a class="nav-logo" href="/">Signe Wilms</a>
+  <button class="nav-toggle" onclick="document.getElementById('main-nav').classList.toggle('open')">☰</button>
+  <ul class="nav-links">
+    <li><a href="/minust.html">Minust</a></li>
+    <li><a href="/#teenused">Teenused</a></li>
+    <li><a href="/#hinnakiri">Hinnakiri</a></li>
+    <li><a href="/#arvamused">Arvamused</a></li>
+    <li><a href="/blogi/" class="active">Blogi</a></li>
+    <li><a href="/#kontakt">Kontakt</a></li>
+    <li><button onclick="openAskly()" class="nav-chat">💬 Küsi kohe</button></li>
+  </ul>
+</nav>
+<main>
+<header class="post-header">
+  <span class="post-tag">Google tööriistad</span>
+  <h1>Google Analytics seadistamine<br><em>samm-sammult</em></h1>
+  <p class="post-date">18. juuni 2026 · Signe Wilms</p>
+</header>
+<article class="post-body">
+  <a href="/blogi/" class="back-link">← Tagasi blogi</a>
+
+  <p>Koduleht on olemas, aga sa ei tea, kas keegi seda üldse külastab? Seda probleemi lahendab Google Analytics 4 — tasuta tööriist, mis näitab, kes su lehel käib, kust ta tuli ja mida ta seal teeb.</p>
+
+  <p>Selle juhendi järgi saad Analytics'i seadistada ilma arendajata, umbes 30 minutiga.</p>
+
+  <div class="step-box">
+    <div class="step-number">1</div>
+    <h3>Loo Google Analytics konto</h3>
+    <p>Mine aadressile <strong>analytics.google.com</strong> ja logi sisse oma Google'i kontoga. Klõpsa „Alusta mõõtmist" ja loo konto — sellele pane oma ettevõtte nimi. Seejärel loo <strong>atribuut</strong> (property) — see on ühe kodulehe mõõtmisüksus. Pane atribuudi nimeks domeeninimi, näiteks <em>signewilms.ee</em>.</p>
+  </div>
+
+  <div class="step-box">
+    <div class="step-number">2</div>
+    <h3>Vali andmevoog (Data Stream)</h3>
+    <p>Pärast atribuudi loomist küsitakse, kust andmed tulevad. Vali <strong>Veeb</strong> (Web). Sisesta oma kodulehe aadress (nt <em>https://signewilms.ee</em>) ja voo nimi. Google genereerib sulle <strong>mõõtmise ID</strong> kujul <em>G-XXXXXXXXXX</em> — see on su Analytics'i sõrmejälg.</p>
+  </div>
+
+  <div class="step-box">
+    <div class="step-number">3</div>
+    <h3>Paigalda jälgimiskood kodulehele</h3>
+    <p>Analytics peab teadma, et su leht on olemas. Selleks lisa mõõtmiskood kodulehe HTML-i. Sul on kaks võimalust:</p>
+    <p><strong>Võimalus A — otse HTML-i:</strong> Kopeeri Google'i antud skriptikood ja kleebi see oma kodulehe <code>&lt;head&gt;</code> sektsiooni. See töötab lihtsate staatiliste lehtede puhul.</p>
+    <p><strong>Võimalus B — Google Tag Manager'i kaudu:</strong> Kui kasutad Tag Manager'it (soovituslik), loo seal GA4 tag ja käivita see kõikidel lehtedel. Tag Manager annab rohkem paindlikkust ilma koodi muutmata.</p>
+  </div>
+
+  <div class="step-box">
+    <div class="step-number">4</div>
+    <h3>Kontrolli, kas kood töötab</h3>
+    <p>Analytics'is mine <strong>Haldus → Andmevood → vali oma voog → Mõõtmisprotokoll</strong>. Seal on nupp „Testi". Teise aknaga ava oma koduleht ja vaata, kas Analytics'is hakkab „Viimase 30 minuti aktiivsed kasutajad" näitama numbrit 1. Kui jah — toimib! Kui mitte, kontrolli, et kood on õiges kohas ja leht on avalik.</p>
+  </div>
+
+  <div class="step-box">
+    <div class="step-number">5</div>
+    <h3>Loe esimesi andmeid</h3>
+    <p>Andmeid kogutakse esimestel päevadel vähehaaval. Kõige kasulikumad aruanded alguses:</p>
+    <p><strong>Reaalajas (Realtime)</strong> — näed hetkel lehel olijaid.<br>
+    <strong>Aruanded → Kasutaja omandamine</strong> — kust külastajad tulevad (Google'ist, otse, sotsiaalmeedias jne).<br>
+    <strong>Aruanded → Seotus → Lehed ja ekraanid</strong> — milliseid lehti vaadatakse kõige rohkem.</p>
+  </div>
+
+  <blockquote><p>Analytics ilma tõlgendamiseta on lihtsalt numbrid. Oluline on küsida: miks see number selline on ja mida ma saan sellega peale hakata?</p></blockquote>
+
+  <h2>Mida Analytics <em>ei asenda</em></h2>
+
+  <p>Analytics näitab, kes su lehel käib — aga see ei näita, miks Google su lehte otsingutulemuses näitab (või ei näita). Selleks on Google Search Console, mis on Analytics'i kaaslane. Mõlemat koos kasutades saad täieliku pildi: mis tõi külastaja lehele ja mida ta seal tegi.</p>
+
+  <p>Kui soovid, et mõlemad tööriistad oleksid korralikult seadistatud ja omavahel ühendatud, teen seda osana oma <a href="/seo-teenus.html">SEO seadistamise teenusest</a>. Analytics, Search Console, structured data ja kõik muu — ühe maksega.</p>
+
+</article>
+
+<section class="cta-section">
+  <h2>Ei viitsi ise<br><em>nokitseda?</em></h2>
+  <p>SEO seadistamine sisaldab Google Analytics 4, Search Console, structured data ja kõik muu, mis on vaja. Hind 500€, valmis 7 päevaga.</p>
+  <a href="/seo-teenus.html" class="btn-primary">Vaata SEO teenust →</a>
+</section>
+</main>
+<footer>
+  <p>© 2026 Signe Wilms. Kõik õigused kaitstud.</p>
+  <a href="mailto:signewilms@gmail.com">signewilms@gmail.com</a>
+</footer>
+<script src="https://chat.askly.me/cw/chat/latest.js" tw-client-key="pa4b3cd1nyslvbvmo6kjggss" async></script>
+</body>
+</html>
