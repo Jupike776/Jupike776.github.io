@@ -15,6 +15,9 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="et_EE">
 <meta property="og:image" content="https://signewilms.ee/signe-hero.webp">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="700">
+<meta property="og:image:alt" content="Signe Wilms – koduleht nullist Eestis">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Koduleht nullist Eestis – 400€, valmis 7 päevaga | Signe Wilms">
 <meta name="twitter:description" content="Koduleht nullist Eestis: professionaalne leht 7 päevaga, 400€ ühekordne makse. Mobiilisõbralik, SSL ja 30 päeva järeltugi kaasa. Ei mingit kuutasu.">
@@ -155,6 +158,27 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Avaleht", "item": "https://signewilms.ee/" },
+    { "@type": "ListItem", "position": 2, "name": "Koduleht nullist", "item": "https://signewilms.ee/koduleht-nullist.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://signewilms.ee/koduleht-nullist.html",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".hero h1", ".hero-sub"]
+  }
+}
 </script>
 <style>
 @font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300 400;font-display:swap;src:url('/fonts/cormorant-garamond-i300.woff2') format('woff2')}
