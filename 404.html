@@ -50,6 +50,14 @@
     window.location.replace('https://blog.signewilms.ee/2026/05/minu-koige-populaarsem-linkedini.html');
   } else if (p.indexOf('/blog/') === 0) {
     window.location.replace('/blogi/');
+  } else if (p === '/en/' || p === '/en/home/' || p.indexOf('/en/') === 0) {
+        window.location.replace('/');
+  } else if (p === '/de/' || p.indexOf('/de/') === 0) {
+        window.location.replace('/');
+  } else if (p === '/ru/' || p.indexOf('/ru/') === 0) {
+        window.location.replace('/');
+  } else if (p.indexOf('/wp-content/') === 0 || p.indexOf('/?page_id=') !== -1 || p.indexOf('/pood/feed') !== -1) {
+        window.location.replace('/');
   }
 </script>
 </head>
