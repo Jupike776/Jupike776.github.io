@@ -47,8 +47,13 @@
   </url>
   <url>
     <loc>https://signewilms.ee/blogi/</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-07-05</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://signewilms.ee/blogi/claude-neli-viisi-kasutada.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://signewilms.ee/blogi/ku-korrastamine-korteriuhistu-dokumentatsioon/</loc>
