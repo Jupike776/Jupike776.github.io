@@ -3,30 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Google Analytics seadistamine samm-sammult | Signe Wilms</title>
-<meta name="description" content="Kuidas seadistada Google Analytics 4 oma kodulehele? Selge juhend samm-sammult — konto loomine, koodi paigaldamine, esimeste andmete lugemine.">
+<title>Google Analytics (GA4) seadistamine samm-sammult | Signe Wilms</title>
+<meta name="description" content="Kuidas seadistada Google Analytics 4 (GA4) oma kodulehele? Selge juhend samm-sammult, konto loomine, koodi paigaldamine otse või Tag Manageriga, esimeste andmete lugemine.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://signewilms.ee/blogi/google-analytics-seadistamine.html">
-<meta property="og:title" content="Google Analytics seadistamine samm-sammult">
-<meta property="og:description" content="Kuidas seadistada Google Analytics 4 oma kodulehele? Selge juhend samm-sammult — konto loomine, koodi paigaldamine, esimeste andmete lugemine.">
+<meta property="og:title" content="Google Analytics (GA4) seadistamine samm-sammult">
+<meta property="og:description" content="Kuidas seadistada Google Analytics 4 (GA4) oma kodulehele? Selge juhend samm-sammult, konto loomine, koodi paigaldamine otse või Tag Manageriga, esimeste andmete lugemine.">
 <meta property="og:url" content="https://signewilms.ee/blogi/google-analytics-seadistamine.html">
 <meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Google Analytics seadistamine samm-sammult">
-<meta name="twitter:description" content="Kuidas seadistada Google Analytics 4 oma kodulehele? Selge juhend väikeettevõtjale.">
+<meta name="twitter:title" content="Google Analytics (GA4) seadistamine samm-sammult">
+<meta name="twitter:description" content="Kuidas seadistada Google Analytics 4 (GA4) oma kodulehele? Selge juhend väikeettevõtjale.">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Google Analytics seadistamine samm-sammult",
-  "description": "Kuidas seadistada Google Analytics 4 oma kodulehele? Selge juhend samm-sammult — konto loomine, koodi paigaldamine, esimeste andmete lugemine.",
+  "headline": "Google Analytics (GA4) seadistamine samm-sammult",
+  "description": "Kuidas seadistada Google Analytics 4 (GA4) oma kodulehele? Selge juhend samm-sammult, konto loomine, koodi paigaldamine otse või Tag Manageriga, esimeste andmete lugemine.",
   "datePublished": "2026-06-18",
-  "dateModified": "2026-06-18",
+  "dateModified": "2026-07-14",
   "author": { "@type": "Person", "name": "Signe Wilms", "url": "https://signewilms.ee/minust.html" },
   "publisher": { "@type": "Organization", "name": "Signe Wilms", "url": "https://signewilms.ee", "logo": { "@type": "ImageObject", "url": "https://signewilms.ee/Signe-Wilms-logo.svg" } },
   "url": "https://signewilms.ee/blogi/google-analytics-seadistamine.html",
-  "keywords": ["google analytics seadistamine", "google analytics 4", "GA4 seadistamine", "kodulehe külastuste mõõtmine", "google analytics eesti"]
+  "keywords": ["google analytics seadistamine", "google analytics 4", "GA4 seadistamine", "google tag manager seadistamine", "gtm seadistamine", "kodulehe külastuste mõõtmine", "google analytics eesti"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Kuidas GA4 seadistada?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Loo konto aadressil analytics.google.com, lisa atribuut oma domeeni jaoks, vali andmevooks Veeb ja lisa saadud mõõtmise ID (G-XXXXXXXXXX) kodulehe koodi kas otse HTML-i või Google Tag Manageri kaudu. Kontrolli Realtime aruandest, kas andmed jõuavad kohale." }
+    },
+    {
+      "@type": "Question",
+      "name": "Mis vahe on Google Analyticsil ja Google Tag Manageril?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Google Analytics 4 kogub ja näitab andmeid külastajate kohta. Google Tag Manager on tööriist, mille kaudu saab GA4 ja muid jälgimiskoode kodulehele paigaldada ilma iga kord koodi muutmata. Enamikul juhtudel on mõistlik seadistada GTM esimesena ja käivitada GA4 selle kaudu." }
+    },
+    {
+      "@type": "Question",
+      "name": "Kas Google Analytics 4 seadistamine on tasuta?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Jah, Google Analytics 4 ja Google Tag Manager on mõlemad tasuta kasutada. Kulu tekib ainult siis, kui tellid seadistamise teenusena." }
+    },
+    {
+      "@type": "Question",
+      "name": "Kui kaua võtab Google Analyticsi seadistamine aega?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ise tehes umbes 30 minutit, kui koduleht võimaldab koodi lisada ilma arendajata. Kui kasutad Tag Managerit ja soovid ka sündmuste jälgimist (nupuvajutused, vormid), võtab põhjalikum seadistus paar tundi." }
+    }
+  ]
 }
 </script>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/cormorant-garamond-i300.woff2" crossorigin>
@@ -90,6 +118,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 48px;display:fl
 .step-number{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:var(--blue);line-height:1;margin-bottom:8px;}
 .step-box h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;margin-bottom:10px;}
 .step-box p{margin-bottom:0;}
+.faq-section{margin-top:12px;}
+.faq-item{border-bottom:1px solid rgba(0,0,0,0.08);padding:18px 0;}
+.faq-item summary{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;cursor:pointer;color:var(--dark);list-style:none;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::before{content:'+';margin-right:10px;color:#1f6b9c;}
+.faq-item[open] summary::before{content:'\2212';}
+.faq-item p{font-size:0.92rem;font-weight:300;line-height:1.8;color:var(--mid);margin-top:10px;margin-bottom:0;}
 .cta-section{text-align:center;padding:80px 80px;background:var(--dark);color:white;}
 .cta-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:300;margin-bottom:14px;}
 .cta-section h2 em{font-style:italic;color:var(--blue);}
@@ -133,7 +168,7 @@ footer a:hover{color:var(--blue);}
 <main>
 <header class="post-header">
   <span class="post-tag">Google tööriistad</span>
-  <h1>Google Analytics seadistamine<br><em>samm-sammult</em></h1>
+  <h1>Google Analytics (GA4) seadistamine<br><em>samm-sammult</em></h1>
   <p class="post-date">18. juuni 2026 · Signe Wilms</p>
 </header>
 <article class="post-body">
@@ -163,6 +198,28 @@ footer a:hover{color:var(--blue);}
     <p><strong>Võimalus B — Google Tag Manager'i kaudu:</strong> Kui kasutad Tag Manager'it (soovituslik), loo seal GA4 tag ja käivita see kõikidel lehtedel. Tag Manager annab rohkem paindlikkust ilma koodi muutmata.</p>
   </div>
 
+  <h2>Google Tag Manager <em>seadistamine</em></h2>
+
+  <p>Google Tag Manager (GTM) ei ole Analytics'i asendaja, vaid selle paigaldamise tööriist. Kõik jälgimiskoodid (GA4, Google Ads, Facebook Pixel jms) lähevad ühte kohta ja saad neid hallata ilma arendaja abita, iga kord uuesti koodi puudutamata.</p>
+
+  <div class="step-box">
+    <div class="step-number">→</div>
+    <h3>Loo GTM konto ja konteiner</h3>
+    <p>Mine aadressile <strong>tagmanager.google.com</strong> ja loo konto. Konteineri tüübiks vali <strong>Veeb</strong>. Google annab sulle konteineri ID kujul <em>GTM-XXXXXXX</em> ja kaks koodilõiku, mis tuleb lisada kodulehe iga lehekülje HTML-i (üks <code>&lt;head&gt;</code> algusesse, teine <code>&lt;body&gt;</code> algusesse).</p>
+  </div>
+
+  <div class="step-box">
+    <div class="step-number">→</div>
+    <h3>Lisa GA4 tag GTM sisse</h3>
+    <p>GTM liideses loo uus tag tüübiga <strong>Google Analytics: GA4 Configuration</strong>, sisesta oma mõõtmise ID ja määra käivitajaks <strong>All Pages</strong>. Nii ei pea GA4 koodi kodulehe koodi eraldi lisama, kõik käib ühe koha kaudu.</p>
+  </div>
+
+  <div class="step-box">
+    <div class="step-number">→</div>
+    <h3>Avalda muudatused</h3>
+    <p>GTM liideses vajuta <strong>Submit</strong> ja siis <strong>Publish</strong>. Enne avaldamist tasub kasutada sisseehitatud <strong>Preview</strong> režiimi, et näha, kas tag käivitub õigesti.</p>
+  </div>
+
   <div class="step-box">
     <div class="step-number">4</div>
     <h3>Kontrolli, kas kood töötab</h3>
@@ -185,6 +242,26 @@ footer a:hover{color:var(--blue);}
   <p>Analytics näitab, kes su lehel käib — aga see ei näita, miks Google su lehte otsingutulemuses näitab (või ei näita). Selleks on Google Search Console, mis on Analytics'i kaaslane. Mõlemat koos kasutades saad täieliku pildi: mis tõi külastaja lehele ja mida ta seal tegi.</p>
 
   <p>Kui soovid, et mõlemad tööriistad oleksid korralikult seadistatud ja omavahel ühendatud, teen seda osana oma <a href="/seo-teenus.html">SEO seadistamise teenusest</a>. Analytics, Search Console, structured data ja kõik muu — ühe maksega.</p>
+
+  <h2>Korduma kippuvad <em>küsimused</em></h2>
+  <div class="faq-section">
+    <details class="faq-item">
+      <summary>Kuidas GA4 seadistada?</summary>
+      <p>Loo konto aadressil analytics.google.com, lisa atribuut oma domeeni jaoks, vali andmevooks Veeb ja lisa saadud mõõtmise ID (G-XXXXXXXXXX) kodulehe koodi kas otse HTML-i või Google Tag Manageri kaudu. Kontrolli Realtime aruandest, kas andmed jõuavad kohale.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Mis vahe on Google Analyticsil ja Google Tag Manageril?</summary>
+      <p>Google Analytics 4 kogub ja näitab andmeid külastajate kohta. Google Tag Manager on tööriist, mille kaudu saab GA4 ja muid jälgimiskoode kodulehele paigaldada ilma iga kord koodi muutmata. Enamikul juhtudel on mõistlik seadistada GTM esimesena ja käivitada GA4 selle kaudu.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Kas Google Analytics 4 seadistamine on tasuta?</summary>
+      <p>Jah, Google Analytics 4 ja Google Tag Manager on mõlemad tasuta kasutada. Kulu tekib ainult siis, kui tellid seadistamise teenusena.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Kui kaua võtab Google Analyticsi seadistamine aega?</summary>
+      <p>Ise tehes umbes 30 minutit, kui koduleht võimaldab koodi lisada ilma arendajata. Kui kasutad Tag Managerit ja soovid ka sündmuste jälgimist (nupuvajutused, vormid), võtab põhjalikum seadistus paar tundi.</p>
+    </details>
+  </div>
 
 </article>
 
