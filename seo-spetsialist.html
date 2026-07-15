@@ -259,12 +259,12 @@
     .nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:white;padding:10px 20px;border-bottom:1px solid rgba(162,209,236,0.2);}
     .nav-links.active{display:flex;}
     .nav-cta{display:none;}
-    .hero{grid-template-columns:1fr;padding:120px 24px 60px;gap:40px;}
+    .hero{grid-template-columns:minmax(0,1fr);padding:120px 24px 60px;gap:40px;}
     .container{padding:0 24px;}
     .section-info,.section-alt,.section-features,.section-testimonial,.section-faq,.section-cta,.section-related{padding:60px 0;}
-    .services-grid{grid-template-columns:1fr;}
-    .testimonial-grid{grid-template-columns:1fr;}
-    .related-grid{grid-template-columns:1fr;}
+    .services-grid{grid-template-columns:minmax(0,1fr);}
+    .testimonial-grid{grid-template-columns:minmax(0,1fr);}
+    .related-grid{grid-template-columns:minmax(0,1fr);}
     .footer{padding:20px 24px;}
     .footer-content{flex-direction:column;gap:8px;text-align:center;}
   }

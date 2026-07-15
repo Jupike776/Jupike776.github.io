@@ -342,7 +342,7 @@ function gtag(){dataLayer.push(arguments);}
     --blue-dark: #7bb8d8;
   }
   * { margin:0; padding:0; box-sizing:border-box; }
-  html { scroll-behavior:smooth; }
+  html { scroll-behavior:smooth; overflow-x:hidden; }
   body { font-family:'DM Sans','DM Sans Fallback',sans-serif; color:var(--dark); background:var(--white); overflow-x:hidden; }
 
   /* NAV */
@@ -380,6 +380,7 @@ function gtag(){dataLayer.push(arguments);}
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 14px;
     text-align: center;
   }
@@ -514,16 +515,17 @@ function gtag(){dataLayer.push(arguments);}
     .nav-links { display:none; flex-direction:column; width:100%; gap:0; padding:10px 0; }
     nav.open .nav-links { display:flex; }
     .nav-links li { padding:10px 4px; border-bottom:1px solid rgba(0,0,0,0.05); }
-    .hero { grid-template-columns:1fr; min-height:auto; }
+    .hero { grid-template-columns:minmax(0,1fr); min-height:auto; }
     .hero-text { padding:90px 24px 48px; }
     .hero-image { height:70vw; }
+    .availability { padding:14px 20px; }
     .strip { padding:14px 20px; gap:20px; }
     .about, .services, .pricing, .testimonials, .contact, .blogi, .uudiskiri { padding:80px 24px; }
-    .about { grid-template-columns:1fr; gap:48px; }
+    .about { grid-template-columns:minmax(0,1fr); gap:48px; }
     .about-images { height:380px; }
-    .services-grid, .pricing-grid, .testimonials-grid { grid-template-columns:1fr; }
+    .services-grid, .pricing-grid, .testimonials-grid { grid-template-columns:minmax(0,1fr); }
     .service-link { background:var(--blue); border-bottom:none; border-radius:4px; padding:10px 20px; font-weight:600; }
-    .contact { grid-template-columns:1fr; gap:48px; }
+    .contact { grid-template-columns:minmax(0,1fr); gap:48px; }
     
     footer { padding:20px 24px; flex-direction:column; gap:8px; text-align:center; }
   }

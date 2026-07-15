@@ -367,10 +367,10 @@ document.addEventListener("DOMContentLoaded", function() {
     .nav-links { display:none; flex-direction:column; width:100%; gap:0; padding:10px 0; }
     nav.open .nav-links { display:flex; }
     .nav-links li { padding:10px 4px; border-bottom:1px solid rgba(0,0,0,0.05); }
-    .hero { grid-template-columns:1fr; padding:120px 24px 60px; gap:40px; }
+    .hero { grid-template-columns:minmax(0,1fr); padding:120px 24px 60px; gap:40px; }
     .section { padding:60px 24px; }
-    .what-grid { grid-template-columns:1fr; }
-    .promise-grid { grid-template-columns:1fr; }
+    .what-grid { grid-template-columns:minmax(0,1fr); }
+    .promise-grid { grid-template-columns:minmax(0,1fr); }
     .cta-section { padding:60px 24px; }
     .faq-section { padding:60px 24px; }
     footer { padding:20px 24px; flex-direction:column; gap:8px; text-align:center; }
