@@ -174,28 +174,28 @@ footer a:hover{color:var(--blue);}
 <article class="post-body">
   <a href="/blogi/" class="back-link">← Tagasi blogi</a>
 
-  <p>Koduleht on olemas, aga sa ei tea, kas keegi seda üldse külastab? Seda probleemi lahendab Google Analytics 4 — tasuta tööriist, mis näitab, kes su lehel käib, kust ta tuli ja mida ta seal teeb.</p>
+  <p>Koduleht on olemas, aga sa ei tea, kas keegi seda üldse külastab? Seda probleemi lahendab Google Analytics 4, tasuta tööriist, mis näitab, kes su lehel käib, kust ta tuli ja mida ta seal teeb.</p>
 
   <p>Selle juhendi järgi saad Analytics'i seadistada ilma arendajata, umbes 30 minutiga.</p>
 
   <div class="step-box">
     <div class="step-number">1</div>
     <h3>Loo Google Analytics konto</h3>
-    <p>Mine aadressile <strong>analytics.google.com</strong> ja logi sisse oma Google'i kontoga. Klõpsa „Alusta mõõtmist" ja loo konto — sellele pane oma ettevõtte nimi. Seejärel loo <strong>atribuut</strong> (property) — see on ühe kodulehe mõõtmisüksus. Pane atribuudi nimeks domeeninimi, näiteks <em>signewilms.ee</em>.</p>
+    <p>Mine aadressile <strong>analytics.google.com</strong> ja logi sisse oma Google'i kontoga. Klõpsa „Alusta mõõtmist" ja loo konto, sellele pane oma ettevõtte nimi. Seejärel loo <strong>atribuut</strong> (property), see on ühe kodulehe mõõtmisüksus. Pane atribuudi nimeks domeeninimi, näiteks <em>signewilms.ee</em>.</p>
   </div>
 
   <div class="step-box">
     <div class="step-number">2</div>
     <h3>Vali andmevoog (Data Stream)</h3>
-    <p>Pärast atribuudi loomist küsitakse, kust andmed tulevad. Vali <strong>Veeb</strong> (Web). Sisesta oma kodulehe aadress (nt <em>https://signewilms.ee</em>) ja voo nimi. Google genereerib sulle <strong>mõõtmise ID</strong> kujul <em>G-XXXXXXXXXX</em> — see on su Analytics'i sõrmejälg.</p>
+    <p>Pärast atribuudi loomist küsitakse, kust andmed tulevad. Vali <strong>Veeb</strong> (Web). Sisesta oma kodulehe aadress (nt <em>https://signewilms.ee</em>) ja voo nimi. Google genereerib sulle <strong>mõõtmise ID</strong> kujul <em>G-XXXXXXXXXX</em>, see on su Analytics'i sõrmejälg.</p>
   </div>
 
   <div class="step-box">
     <div class="step-number">3</div>
     <h3>Paigalda jälgimiskood kodulehele</h3>
     <p>Analytics peab teadma, et su leht on olemas. Selleks lisa mõõtmiskood kodulehe HTML-i. Sul on kaks võimalust:</p>
-    <p><strong>Võimalus A — otse HTML-i:</strong> Kopeeri Google'i antud skriptikood ja kleebi see oma kodulehe <code>&lt;head&gt;</code> sektsiooni. See töötab lihtsate staatiliste lehtede puhul.</p>
-    <p><strong>Võimalus B — Google Tag Manager'i kaudu:</strong> Kui kasutad Tag Manager'it (soovituslik), loo seal GA4 tag ja käivita see kõikidel lehtedel. Tag Manager annab rohkem paindlikkust ilma koodi muutmata.</p>
+    <p><strong>Võimalus A, otse HTML-i:</strong> Kopeeri Google'i antud skriptikood ja kleebi see oma kodulehe <code>&lt;head&gt;</code> sektsiooni. See töötab lihtsate staatiliste lehtede puhul.</p>
+    <p><strong>Võimalus B, Google Tag Manager'i kaudu:</strong> Kui kasutad Tag Manager'it (soovituslik), loo seal GA4 tag ja käivita see kõikidel lehtedel. Tag Manager annab rohkem paindlikkust ilma koodi muutmata.</p>
   </div>
 
   <h2>Google Tag Manager <em>seadistamine</em></h2>
@@ -223,25 +223,25 @@ footer a:hover{color:var(--blue);}
   <div class="step-box">
     <div class="step-number">4</div>
     <h3>Kontrolli, kas kood töötab</h3>
-    <p>Analytics'is mine <strong>Haldus → Andmevood → vali oma voog → Mõõtmisprotokoll</strong>. Seal on nupp „Testi". Teise aknaga ava oma koduleht ja vaata, kas Analytics'is hakkab „Viimase 30 minuti aktiivsed kasutajad" näitama numbrit 1. Kui jah — toimib! Kui mitte, kontrolli, et kood on õiges kohas ja leht on avalik.</p>
+    <p>Analytics'is mine <strong>Haldus → Andmevood → vali oma voog → Mõõtmisprotokoll</strong>. Seal on nupp „Testi". Teise aknaga ava oma koduleht ja vaata, kas Analytics'is hakkab „Viimase 30 minuti aktiivsed kasutajad" näitama numbrit 1. Kui jah, toimib! Kui mitte, kontrolli, et kood on õiges kohas ja leht on avalik.</p>
   </div>
 
   <div class="step-box">
     <div class="step-number">5</div>
     <h3>Loe esimesi andmeid</h3>
     <p>Andmeid kogutakse esimestel päevadel vähehaaval. Kõige kasulikumad aruanded alguses:</p>
-    <p><strong>Reaalajas (Realtime)</strong> — näed hetkel lehel olijaid.<br>
-    <strong>Aruanded → Kasutaja omandamine</strong> — kust külastajad tulevad (Google'ist, otse, sotsiaalmeedias jne).<br>
-    <strong>Aruanded → Seotus → Lehed ja ekraanid</strong> — milliseid lehti vaadatakse kõige rohkem.</p>
+    <p><strong>Reaalajas (Realtime)</strong>, näed hetkel lehel olijaid.<br>
+    <strong>Aruanded → Kasutaja omandamine</strong>, kust külastajad tulevad (Google'ist, otse, sotsiaalmeedias jne).<br>
+    <strong>Aruanded → Seotus → Lehed ja ekraanid</strong>, milliseid lehti vaadatakse kõige rohkem.</p>
   </div>
 
   <blockquote><p>Analytics ilma tõlgendamiseta on lihtsalt numbrid. Oluline on küsida: miks see number selline on ja mida ma saan sellega peale hakata?</p></blockquote>
 
   <h2>Mida Analytics <em>ei asenda</em></h2>
 
-  <p>Analytics näitab, kes su lehel käib — aga see ei näita, miks Google su lehte otsingutulemuses näitab (või ei näita). Selleks on Google Search Console, mis on Analytics'i kaaslane. Mõlemat koos kasutades saad täieliku pildi: mis tõi külastaja lehele ja mida ta seal tegi.</p>
+  <p>Analytics näitab, kes su lehel käib, aga see ei näita, miks Google su lehte otsingutulemuses näitab (või ei näita). Selleks on Google Search Console, mis on Analytics'i kaaslane. Mõlemat koos kasutades saad täieliku pildi: mis tõi külastaja lehele ja mida ta seal tegi.</p>
 
-  <p>Kui soovid, et mõlemad tööriistad oleksid korralikult seadistatud ja omavahel ühendatud, teen seda osana oma <a href="/seo-teenus.html">SEO seadistamise teenusest</a>. Analytics, Search Console, structured data ja kõik muu — ühe maksega.</p>
+  <p>Kui soovid, et mõlemad tööriistad oleksid korralikult seadistatud ja omavahel ühendatud, teen seda osana oma <a href="/seo-teenus.html">SEO seadistamise teenusest</a>. Analytics, Search Console, structured data ja kõik muu, ühe maksega.</p>
 
   <h2>Korduma kippuvad <em>küsimused</em></h2>
   <div class="faq-section">
